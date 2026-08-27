@@ -1,0 +1,11 @@
+{
+  "slug": "tab-markup-playground",
+  "title": "Tab Playbook",
+  "territory": "games-creative",
+  "user": "Guitar teachers, self-taught players, and music-tool builders who need a compact way to write chord/tab snippets and immediately see the underlying harmony without committing to a full notation suite.",
+  "smallest_useful_product": "A static web editor for a limited open chord/tab markup, with playback-free fretboard, interval, scale, and transposition views plus shareable URLs.",
+  "success_measure": "A teacher can author and share a four-bar exercise with transposed fretboard and interval views in under five minutes.",
+  "artifact_class": "static-web",
+  "monetization": "free",
+  "constraints": "Do not host copyrighted song tabs; support original/public-domain exercises; clearly separate educational visualization from authoritative music notation."
+}
