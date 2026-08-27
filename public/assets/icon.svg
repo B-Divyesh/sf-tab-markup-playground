@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tab Playbook">
+  <rect width="64" height="64" rx="8" fill="#080b12"/>
+  <path d="M12 16h40v6H35v30h-7V22H12z" fill="#f4df4e"/>
+  <circle cx="44" cy="37" r="6" fill="#65e6c4"/>
+  <path d="M12 31h12M12 42h12M40 48h12" stroke="#f4f0df" stroke-width="3"/>
+</svg>

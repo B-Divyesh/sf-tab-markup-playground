@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#080b12" />
+    <meta name="description" content="Write compact guitar chord and tab exercises, then inspect fretboard notes, intervals, scales, and transpositions." />
+    <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Tab Playbook — turn guitar tab into a theory lesson</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to editor</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Tab Playbook home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>TAB PLAYBOOK</span>
+      </a>
+      <div class="header-status">
+        <span class="network-dot" aria-hidden="true"></span>
+        <span id="network-label">Ready offline</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">TEXT IN · THEORY OUT</p>
+          <h1 id="page-title">Make the neck<br /><span>explain the tab.</span></h1>
+          <p class="lede">Write a compact original exercise. See every chord, interval, and scale tone light up—then transpose and share it in one link.</p>
+          <a class="jump-link" href="#workbench">Open the workbench <span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="hero-art">
+          <picture>
+            <source type="image/avif" srcset="/assets/hero-640.avif 640w, /assets/hero-1024.avif 1024w" sizes="(max-width: 800px) 100vw, 48vw" />
+            <source type="image/webp" srcset="/assets/hero-640.webp 640w, /assets/hero-1024.webp 1024w" sizes="(max-width: 800px) 100vw, 48vw" />
+            <img src="/assets/hero-1024.webp" width="1024" height="683" alt="Pixel-art guitar neck becoming a grid of glowing note positions" decoding="async" fetchpriority="high" />
+          </picture>
+          <figcaption>Signal map 01 · fretboard / harmony</figcaption>
+        </figure>
+      </section>
+
+      <section class="workbench" id="workbench" aria-labelledby="workbench-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LIVE WORKBENCH</p>
+            <h2 id="workbench-title">One exercise, four views</h2>
+          </div>
+          <p>Drafts stay in this browser. Sharing puts the exercise in the URL—there is no account or upload.</p>
+        </div>
+
+        <div class="deck-layout">
+          <section class="editor-deck" aria-labelledby="editor-title">
+            <div class="deck-titlebar">
+              <div><span class="deck-index">01</span><h3 id="editor-title">Markup</h3></div>
+              <span class="save-state" id="save-state" role="status">Saved locally</span>
+            </div>
+            <label class="sr-only" for="markup">Exercise markup</label>
+            <div class="editor-wrap">
+              <pre class="line-numbers" id="line-numbers" aria-hidden="true">1</pre>
+              <textarea id="markup" spellcheck="false" aria-describedby="syntax-help parse-status"></textarea>
+            </div>
+            <div id="parse-status" class="parse-status" role="status" aria-live="polite"></div>
+            <details class="syntax-guide" id="syntax-help">
+              <summary>Markup cheat sheet</summary>
+              <div class="syntax-grid">
+                <p><code>@title Name</code><span>Exercise title</span></p>
+                <p><code>@key C</code><span>Teaching key</span></p>
+                <p><code>| C | Am7 | F | G |</code><span>Chord bars</span></p>
+                <p><code>e|--0--1--|</code><span>Optional tab lines</span></p>
+              </div>
+            </details>
+            <div class="editor-actions">
+              <button class="button primary" id="share-button" type="button">Copy share link</button>
+              <button class="button" id="copy-markup" type="button">Copy markup</button>
+              <button class="button" id="example-button" type="button">Load example</button>
+              <button class="button danger" id="clear-button" type="button">Clear</button>
+            </div>
+            <p class="shortcut-hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> copies the share link</p>
+          </section>
+
+          <section class="analysis-deck" aria-labelledby="analysis-title">
+            <div class="deck-titlebar analysis-titlebar">
+              <div><span class="deck-index">02</span><h3 id="analysis-title">Theory scope</h3></div>
+              <label class="transpose-label" for="transpose">Transpose</label>
+              <select id="transpose" aria-label="Transpose exercise">
+                <option value="-5">−5</option><option value="-4">−4</option><option value="-3">−3</option>
+                <option value="-2">−2</option><option value="-1">−1</option><option selected value="0">Original</option>
+                <option value="1">+1</option><option value="2">+2</option><option value="3">+3</option>
+                <option value="4">+4</option><option value="5">+5</option><option value="6">+6</option>
+              </select>
+              <button class="button compact" id="apply-transpose" type="button">Apply to text</button>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Theory views">
+              <button role="tab" aria-selected="true" aria-controls="panel-chords" id="tab-chords" tabindex="0">Chords</button>
+              <button role="tab" aria-selected="false" aria-controls="panel-fretboard" id="tab-fretboard" tabindex="-1">Fretboard</button>
+              <button role="tab" aria-selected="false" aria-controls="panel-intervals" id="tab-intervals" tabindex="-1">Intervals</button>
+              <button role="tab" aria-selected="false" aria-controls="panel-scale" id="tab-scale" tabindex="-1">Scale</button>
+            </div>
+            <div class="analysis-body" id="analysis-body" aria-live="polite">
+              <section role="tabpanel" id="panel-chords" aria-labelledby="tab-chords"></section>
+              <section role="tabpanel" id="panel-fretboard" aria-labelledby="tab-fretboard" hidden></section>
+              <section role="tabpanel" id="panel-intervals" aria-labelledby="tab-intervals" hidden></section>
+              <section role="tabpanel" id="panel-scale" aria-labelledby="tab-scale" hidden></section>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="format-note" aria-labelledby="format-title">
+        <p class="eyebrow">OPEN FORMAT · V0.1</p>
+        <h2 id="format-title">Small enough to teach from.</h2>
+        <p>Tab Playbook is an educational visualization, not authoritative notation or an audio player. Use it for exercises you wrote or material you have permission to share.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Tab Playbook · a local-first teaching tool</p>
+      <nav aria-label="Legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+      <p>Original pixel artwork generated for this product.</p>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
