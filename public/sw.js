@@ -1,8 +1,19 @@
 const CACHE = 'tab-playbook-v1';
-const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/assets/icon.svg', '/assets/hero-640.webp'];
+const PAGES = ['/', '/index.html', '/privacy/', '/terms/'];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()));
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    const assets = new Set(['/manifest.webmanifest', '/assets/icon.svg']);
+    for (const page of PAGES) {
+      const response = await fetch(page);
+      await cache.put(page, response.clone());
+      const html = await response.text();
+      for (const match of html.matchAll(/(?:src|href)="(\/[^"#]+)"/g)) assets.add(match[1]);
+    }
+    await cache.addAll([...assets]);
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener('activate', (event) => {
@@ -14,5 +25,5 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
     if (response.ok) caches.open(CACHE).then((cache) => cache.put(event.request, response.clone()));
     return response;
-  }).catch(() => caches.match('/index.html'))));
+  }).catch(() => event.request.mode === 'navigate' ? caches.match('/index.html') : Response.error())));
 });

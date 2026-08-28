@@ -29,12 +29,11 @@ Color is never the only carrier: labels, shapes, and text accompany each state.
 
 ## Type and rhythm
 
-Two local/system families, no runtime font request:
+Two system-native families with no font download or runtime request:
 
-- Interface and prose: `Inter`, loaded from a checked-in WOFF2 subset when
-  available, falling back to `system-ui`.
-- Markup, note names, and tracker labels: `IBM Plex Mono`, loaded locally as a
-  WOFF2 subset with a system monospace fallback.
+- Interface and prose: the platform `ui-sans-serif` / `system-ui` stack.
+- Markup, note names, and tracker labels: the platform `SFMono-Regular` /
+  `Consolas` / `Liberation Mono` stack.
 
 Type scale: 13 / 16 / 20 / 28 / 44 px. Body never drops below 16 px. Labels may
 use 13 px only with increased tracking. Spacing follows a 4/8 px rhythm, with

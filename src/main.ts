@@ -37,7 +37,7 @@ function shareFromHash(): { value: string | null; invalid: boolean } {
 function initialValue(): string {
   const shared = shareFromHash();
   if (shared.value !== null) return shared.value;
-  try { return localStorage.getItem(storageKey) || DEFAULT_MARKUP; }
+  try { return localStorage.getItem(storageKey) ?? DEFAULT_MARKUP; }
   catch { return DEFAULT_MARKUP; }
 }
 
@@ -253,6 +253,6 @@ updateNetwork();
 render();
 if (shareFromHash().invalid) showToast('That share link is damaged or too large.', true);
 
-if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || ['localhost', '127.0.0.1'].includes(location.hostname))) {
   window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => undefined));
 }
