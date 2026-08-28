@@ -161,13 +161,13 @@
       "degree": 9
     },
     {
-      "id": "src_main_render",
-      "label": "render()",
+      "id": "src_music_parsemarkup",
+      "label": "parseMarkup()",
       "degree": 8
     },
     {
-      "id": "src_music_parsemarkup",
-      "label": "parseMarkup()",
+      "id": "src_main_render",
+      "label": "render()",
       "degree": 8
     },
     {
@@ -176,13 +176,13 @@
       "degree": 8
     },
     {
-      "id": "src_main_escapehtml",
-      "label": "escapeHtml()",
+      "id": "src_music_transposemarkup",
+      "label": "transposeMarkup()",
       "degree": 7
     },
     {
-      "id": "src_main_viewheading",
-      "label": "viewHeading()",
+      "id": "src_main_escapehtml",
+      "label": "escapeHtml()",
       "degree": 7
     },
     {
@@ -193,8 +193,8 @@
   ],
   "surprises": [
     {
-      "source": "renderChords()",
-      "target": "chordTones()",
+      "source": "copyShareLink()",
+      "target": "parseMarkup()",
       "source_files": [
         "src/main.ts",
         "src/music.ts"
@@ -205,14 +205,14 @@
     },
     {
       "source": "renderChords()",
-      "target": "noteName()",
+      "target": "chordTones()",
       "source_files": [
         "src/main.ts",
         "src/music.ts"
       ],
-      "confidence": "INFERRED",
-      "relation": "indirect_call",
-      "why": "inferred connection - not explicitly stated in source"
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
     },
     {
       "source": "renderFretboard()",
@@ -237,15 +237,15 @@
       "why": "bridges separate communities"
     },
     {
-      "source": "copyShareLink()",
-      "target": "parseMarkup()",
+      "source": "renderChords()",
+      "target": "noteName()",
       "source_files": [
         "src/main.ts",
         "src/music.ts"
       ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source"
     }
   ],
   "tokens": {

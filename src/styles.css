@@ -23,7 +23,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--void); font-size: 16px; line-height: 1.55; }
 button, textarea, select { font: inherit; }
 button, select, a { -webkit-tap-highlight-color: transparent; }
-a { color: var(--pulse); text-underline-offset: 4px; }
+a { display: inline-flex; align-items: center; min-width: 44px; min-height: 44px; color: var(--pulse); text-underline-offset: 4px; }
 a:hover { color: var(--signal); }
 button, select { min-height: 44px; }
 button { cursor: pointer; }
@@ -89,7 +89,7 @@ h1 span { color: var(--signal); }
 .button:active { transform: translateY(2px); }
 .button.primary { color: var(--void); border-color: var(--signal); background: var(--signal); }
 .button.danger { color: var(--coral); border-color: #8f4c50; }
-.button.compact { min-height: 40px; }
+.button.compact { min-height: 44px; }
 .shortcut-hint { margin: 0; padding: 0 16px 18px; color: var(--mist); font-size: 13px; }
 kbd { padding: 2px 5px; color: var(--paper); border: 1px solid var(--line); background: #090e16; font: 11px var(--mono); }
 

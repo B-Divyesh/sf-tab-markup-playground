@@ -1,10 +1,10 @@
-const CACHE = 'tab-playbook-v1';
+const CACHE = 'tab-playbook-v2';
 const PAGES = ['/', '/index.html', '/privacy/', '/terms/'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
-    const assets = new Set(['/manifest.webmanifest', '/assets/icon.svg']);
+    const assets = new Set(['/manifest.webmanifest', '/assets/icon-c1346c346bee.svg']);
     for (const page of PAGES) {
       const response = await fetch(page);
       await cache.put(page, response.clone());

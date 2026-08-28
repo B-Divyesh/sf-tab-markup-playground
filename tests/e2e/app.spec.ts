@@ -1,6 +1,19 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
+async function expectMinimumTargets(page: import('@playwright/test').Page): Promise<void> {
+  const controls = page.locator('a[href], button, select, summary, textarea, [tabindex="0"]');
+  const count = await controls.count();
+  expect(count).toBeGreaterThan(0);
+  for (let index = 0; index < count; index += 1) {
+    const control = controls.nth(index);
+    const box = await control.boundingBox();
+    expect(box, `interactive control ${index} should have a layout box`).not.toBeNull();
+    expect(box!.width, `interactive control ${index} should be at least 44px wide`).toBeGreaterThanOrEqual(44);
+    expect(box!.height, `interactive control ${index} should be at least 44px tall`).toBeGreaterThanOrEqual(44);
+  }
+}
+
 test('authors, analyzes, transposes, and shares an exercise', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write']);
   await page.goto('/');
@@ -39,6 +52,17 @@ test('mobile layout keeps controls usable', async ({ page }, testInfo) => {
   expect(box?.height).toBeGreaterThanOrEqual(44);
   await page.getByRole('tab', { name: 'Scale' }).click();
   await expect(page.getByText(/major map/)).toBeVisible();
+});
+
+test('keeps every interactive target at least 44px on the app and legal pages', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('tab', { name: 'Fretboard' }).click();
+  await expectMinimumTargets(page);
+
+  for (const route of ['/privacy/', '/terms/']) {
+    await page.goto(route);
+    await expectMinimumTargets(page);
+  }
 });
 
 test('reloads from the offline shell', async ({ page, context }, testInfo) => {
