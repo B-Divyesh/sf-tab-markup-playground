@@ -1,0 +1,86 @@
+{
+  ".factory/brief.json": {
+    "mtime": 1787883795.213626,
+    "seen": 1787883796.2959034,
+    "ast_hash": "a719f16361d678fa06870eca7e094383",
+    "semantic_hash": "a719f16361d678fa06870eca7e094383"
+  },
+  "assets/src/hero-prompt.json": {
+    "mtime": 1787883795.213626,
+    "seen": 1787883796.2959075,
+    "ast_hash": "76fd67ae4c301fbb7e119840437e6fb6",
+    "semantic_hash": "76fd67ae4c301fbb7e119840437e6fb6"
+  },
+  "assets/src/hero-source.png.json": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959092,
+    "ast_hash": "a02f13e1db776bb05416079ce40ce351",
+    "semantic_hash": "a02f13e1db776bb05416079ce40ce351"
+  },
+  "package.json": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959101,
+    "ast_hash": "e56ecb3e26a7a364ade81c9552f78c69",
+    "semantic_hash": "e56ecb3e26a7a364ade81c9552f78c69"
+  },
+  "playwright.config.ts": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959108,
+    "ast_hash": "9538c1d742698b33600e52b78b914e13",
+    "semantic_hash": "9538c1d742698b33600e52b78b914e13"
+  },
+  "public/staticwebapp.config.json": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.295912,
+    "ast_hash": "c853752b9a916c75b0822839a46003ad",
+    "semantic_hash": "c853752b9a916c75b0822839a46003ad"
+  },
+  "public/sw.js": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.295913,
+    "ast_hash": "a2a577123b03e85d0584eb16bd9fa85d",
+    "semantic_hash": "a2a577123b03e85d0584eb16bd9fa85d"
+  },
+  "src/legal.ts": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959137,
+    "ast_hash": "ca72c6bcf1e8d05243e224ea0c064b9b",
+    "semantic_hash": "ca72c6bcf1e8d05243e224ea0c064b9b"
+  },
+  "src/main.ts": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959146,
+    "ast_hash": "9f964f6d80550ce13a9248e9d86d1ab8",
+    "semantic_hash": "9f964f6d80550ce13a9248e9d86d1ab8"
+  },
+  "src/music.ts": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959158,
+    "ast_hash": "89006e34bbce20522fedd43d9f4dcf8e",
+    "semantic_hash": "89006e34bbce20522fedd43d9f4dcf8e"
+  },
+  "tests/e2e/app.spec.ts": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959168,
+    "ast_hash": "6d83f2cef63d91ba1f633e704e76d763",
+    "semantic_hash": "6d83f2cef63d91ba1f633e704e76d763"
+  },
+  "tests/unit/music.test.ts": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959177,
+    "ast_hash": "5c14da14423e79fd8dd857d2c3efba67",
+    "semantic_hash": "5c14da14423e79fd8dd857d2c3efba67"
+  },
+  "tsconfig.json": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959187,
+    "ast_hash": "1d1f79b6da191da386ef50314b3dfe27",
+    "semantic_hash": "1d1f79b6da191da386ef50314b3dfe27"
+  },
+  "vite.config.ts": {
+    "mtime": 1787883795.2176259,
+    "seen": 1787883796.2959197,
+    "ast_hash": "f72f64c14e544274c634f99668f920c5",
+    "semantic_hash": "f72f64c14e544274c634f99668f920c5"
+  }
+}
