@@ -91,8 +91,9 @@ Deployed `dist/` to the existing Azure Static Web App
 `sf-tab-markup-playground` in `eastus2` with the factory static deployment
 script. Azure deployment ID: `3d45deb5-cdbe-4df0-94df-6ec6059916dc`.
 
-- Live root, privacy, terms, JS, CSS, sampled hero AVIF, and service worker
-  SHA-256 hashes match the local production build exactly.
+- Live root, privacy, terms, service worker, and every file in `dist/assets/`
+  match the local production build by SHA-256; every `dist/assets/` response
+  also returns the one-year immutable policy.
 - Live JS `/assets/main-C9zuRvg9.js`, CSS
   `/assets/styles-C2280_YT.css`, and hero
   `/assets/hero-640-288e461a0630.avif` return one-year immutable caching.
