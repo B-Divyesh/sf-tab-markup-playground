@@ -1,4 +1,53 @@
-# Tab Playbook — repair handoff
+# Tab Playbook — verification handoff
+
+Work order: `tab-markup-playground-verify-2`
+
+Verified candidate: `2c9a0ff72be8346b15b8fb42b497f6a3bf0bd3f1`
+
+Live URL: <https://tab-markup-playground.sociobot.in>
+
+Completed: 2026-08-28
+
+## Result: PASS
+
+Independent clean-checkout verification passed. The live deployment matches
+the candidate production build, and no defects were found. Full evidence is in
+[`.factory/verification-2.md`](verification-2.md).
+
+## How verified
+
+```sh
+npm ci
+npm audit --audit-level=high
+npm test
+npx tsc --noEmit
+npm run build
+npm run test:e2e
+```
+
+Results: 9/9 unit/configuration tests and all 14 configured Playwright runs
+passed; `dist/` was produced. Live desktop and 390px mobile checks covered the
+four-bar author/analyze/transpose/share job, invalid-markup recovery, empty and
+undo states, 8,000-character boundary, keyboard tabs/focus, reduced motion,
+all-page Axe, console/page errors, service-worker update/offline reload,
+same-origin-only traffic, headers/caching, and SHA-256 build/deployment
+identity. Lighthouse mobile: Performance 99, Accessibility 100, Best Practices
+100, SEO 100.
+
+The product has no API, account, or backend endpoint; rate-limit and identity
+tenant checks are not applicable. It keeps drafts in browser localStorage and
+share content in URL fragments; it sends no analytics or third-party requests.
+
+## Known boundaries
+
+Tab Playbook is intentionally an educational visualization: it does not offer
+authoritative notation, audio playback, copyrighted-song hosting, a song
+catalog, accounts, or uploads. Applying transposition preserves tab fret
+numbers because safe fret rewriting requires fingering/range choices.
+
+---
+
+# Historical repair handoff
 
 Work order: `tab-markup-playground-repair-2`
 
