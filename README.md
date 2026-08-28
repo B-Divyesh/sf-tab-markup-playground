@@ -49,8 +49,10 @@ The production command is exactly `npm run build`. It writes the static site to
 ## Deploy
 
 Deploy `dist/` as an Azure Static Web App. `staticwebapp.config.json` is copied
-into the build and supplies navigation fallback, MIME types, and security
-headers. No infrastructure, billing, analytics, or runtime secrets are needed.
+into the build and supplies navigation fallback, MIME types, a restrictive
+Content Security Policy, short-lived document/service-worker caching, and
+one-year immutable caching for content-hashed assets. No infrastructure,
+billing, analytics, or runtime secrets are needed.
 
 The interface design and asset provenance are documented in
 [`.factory/design.md`](.factory/design.md). The generated hero source and its

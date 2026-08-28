@@ -82,8 +82,7 @@ function renderChords(exercise: Exercise, shift: number): void {
   if (!exercise.chords.length) { panel.innerHTML = emptyMarkup(); return; }
   const cards = exercise.chords.map((chord, index) => {
     const tones = chordTones(chord, shift).map(noteName).join(' · ');
-    const colors = ['var(--signal)', 'var(--pulse)', 'var(--violet)', 'var(--coral)'];
-    return `<article class="chord-card" style="--accent:${colors[index % colors.length]}"><span class="bar">Bar ${index + 1}</span><div class="chord-name">${escapeHtml(chordName(chord, shift))}</div><div class="roman">${escapeHtml(romanNumeral(chord, exercise.key))}</div><div class="tones">Tones · ${escapeHtml(tones)}</div></article>`;
+    return `<article class="chord-card accent-${index % 4}"><span class="bar">Bar ${index + 1}</span><div class="chord-name">${escapeHtml(chordName(chord, shift))}</div><div class="roman">${escapeHtml(romanNumeral(chord, exercise.key))}</div><div class="tones">Tones · ${escapeHtml(tones)}</div></article>`;
   }).join('');
   const tab = exercise.tab.length ? `<pre class="tab-preview" aria-label="Tab preview">${escapeHtml(exercise.tab.join('\n'))}</pre>` : '';
   panel.innerHTML = `${viewHeading(exercise, shift, exercise.title, 'Chord names, scale function, and chord tones at a glance.')}<div class="chord-track">${cards}</div>${tab}`;
@@ -99,9 +98,9 @@ function fretboardHtml(pitches: number[], root: number, labels: Map<number, stri
       const pitch = (string.pitch + fret) % 12;
       if (!pitches.includes(pitch)) return `<span class="fret-cell" aria-hidden="true">·</span>`;
       const rootClass = pitch === root ? ' root' : '';
-      const delay = Math.min((fret + stringIndex) * 12, 180);
+      const delayStep = Math.min(fret + stringIndex, 15);
       const label = labels.get(pitch) ?? noteName(pitch);
-      return `<span class="fret-cell note"><span class="note-dot${rootClass}" style="animation-delay:${delay}ms" title="${escapeHtml(noteName(pitch))}">${escapeHtml(label)}</span></span>`;
+      return `<span class="fret-cell note"><span class="note-dot${rootClass} note-delay-${delayStep}" title="${escapeHtml(noteName(pitch))}">${escapeHtml(label)}</span></span>`;
     }).join('');
     return `<span class="fret-label">${string.name}</span>${frets}`;
   }).join('');

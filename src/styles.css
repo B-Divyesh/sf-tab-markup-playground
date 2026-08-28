@@ -113,6 +113,10 @@ select { padding: 0 32px 0 12px; color: var(--paper); border: 1px solid #59677d;
 .key-chip { flex: none; padding: 7px 10px; color: var(--void); background: var(--pulse); font: 700 13px/1 var(--mono); }
 .chord-track { display: grid; grid-template-columns: repeat(4, minmax(105px, 1fr)); gap: 12px; }
 .chord-card { min-height: 140px; padding: 16px; border: 1px solid var(--line); background: #0b111a; box-shadow: inset 0 3px 0 var(--accent, var(--signal)); }
+.chord-card.accent-0 { --accent: var(--signal); }
+.chord-card.accent-1 { --accent: var(--pulse); }
+.chord-card.accent-2 { --accent: var(--violet); }
+.chord-card.accent-3 { --accent: var(--coral); }
 .chord-card .bar { color: var(--mist); font: 11px/1 var(--mono); text-transform: uppercase; }
 .chord-name { margin: 12px 0 4px; color: var(--paper); font: 700 28px/1 var(--mono); }
 .roman { color: var(--accent, var(--signal)); font: 700 14px/1.4 var(--mono); }
@@ -129,6 +133,21 @@ select { padding: 0 32px 0 12px; color: var(--paper); border: 1px solid #59677d;
 .fret-cell.note { color: var(--void); }
 .note-dot { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: var(--pulse); font-weight: 700; animation: note-in 220ms ease-out both; }
 .note-dot.root { background: var(--signal); box-shadow: 0 0 0 3px rgba(244,223,78,.18); }
+.note-delay-1 { animation-delay: 12ms; }
+.note-delay-2 { animation-delay: 24ms; }
+.note-delay-3 { animation-delay: 36ms; }
+.note-delay-4 { animation-delay: 48ms; }
+.note-delay-5 { animation-delay: 60ms; }
+.note-delay-6 { animation-delay: 72ms; }
+.note-delay-7 { animation-delay: 84ms; }
+.note-delay-8 { animation-delay: 96ms; }
+.note-delay-9 { animation-delay: 108ms; }
+.note-delay-10 { animation-delay: 120ms; }
+.note-delay-11 { animation-delay: 132ms; }
+.note-delay-12 { animation-delay: 144ms; }
+.note-delay-13 { animation-delay: 156ms; }
+.note-delay-14 { animation-delay: 168ms; }
+.note-delay-15 { animation-delay: 180ms; }
 .fret-numbers { display: grid; grid-template-columns: 42px repeat(13, minmax(42px, 1fr)); min-width: 700px; color: var(--mist); font: 11px/1 var(--mono); text-align: center; }
 .fret-numbers span { padding-top: 9px; }
 .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; color: var(--mist); font-size: 13px; }

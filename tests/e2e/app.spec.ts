@@ -2,15 +2,16 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 async function expectMinimumTargets(page: import('@playwright/test').Page): Promise<void> {
-  const controls = page.locator('a[href], button, select, summary, textarea, [tabindex="0"]');
+  const controls = page.locator('a[href], button, select, summary, textarea, [tabindex="0"]').filter({ visible: true });
   const count = await controls.count();
   expect(count).toBeGreaterThan(0);
   for (let index = 0; index < count; index += 1) {
     const control = controls.nth(index);
     const box = await control.boundingBox();
-    expect(box, `interactive control ${index} should have a layout box`).not.toBeNull();
-    expect(box!.width, `interactive control ${index} should be at least 44px wide`).toBeGreaterThanOrEqual(44);
-    expect(box!.height, `interactive control ${index} should be at least 44px tall`).toBeGreaterThanOrEqual(44);
+    const label = await control.evaluate((element) => element.getAttribute('aria-label') || element.textContent?.trim() || element.tagName);
+    expect(box, `${label} should have a layout box`).not.toBeNull();
+    expect(box!.width, `${label} should be at least 44px wide`).toBeGreaterThanOrEqual(44);
+    expect(box!.height, `${label} should be at least 44px tall`).toBeGreaterThanOrEqual(44);
   }
 }
 
@@ -39,6 +40,10 @@ test('supports tabs by keyboard and has no serious axe violations', async ({ pag
   await chords.focus();
   await chords.press('ArrowRight');
   await expect(page.getByRole('tab', { name: 'Fretboard' })).toHaveAttribute('aria-selected', 'true');
+  await page.getByRole('tab', { name: 'Fretboard' }).press('End');
+  await expect(page.getByRole('tab', { name: 'Scale' })).toBeFocused();
+  await page.getByRole('tab', { name: 'Scale' }).press('Home');
+  await expect(chords).toBeFocused();
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations.filter((violation) => ['serious', 'critical'].includes(violation.impact ?? ''))).toEqual([]);
   expect(consoleErrors).toEqual([]);
@@ -56,12 +61,40 @@ test('mobile layout keeps controls usable', async ({ page }, testInfo) => {
 
 test('keeps every interactive target at least 44px on the app and legal pages', async ({ page }) => {
   await page.goto('/');
-  await page.getByRole('tab', { name: 'Fretboard' }).click();
-  await expectMinimumTargets(page);
+  for (const tabName of ['Chords', 'Fretboard', 'Intervals', 'Scale']) {
+    await page.getByRole('tab', { name: tabName }).click();
+    await expectMinimumTargets(page);
+  }
 
   for (const route of ['/privacy/', '/terms/']) {
     await page.goto(route);
     await expectMinimumTargets(page);
+  }
+});
+
+test('enforces the production CSP without blocked resources or inline styles', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()); });
+  page.on('pageerror', (error) => errors.push(error.message));
+
+  const response = await page.goto('/');
+  const policy = response?.headers()['content-security-policy'] ?? '';
+  expect(policy).toContain("default-src 'self'");
+  expect(policy).toContain("style-src 'self'");
+  expect(policy).not.toContain("'unsafe-inline'");
+  await page.getByRole('tab', { name: 'Fretboard' }).click();
+  await page.getByRole('tab', { name: 'Scale' }).click();
+  await expect(page.locator('[style]')).toHaveCount(0);
+
+  for (const route of ['/privacy/', '/terms/']) await page.goto(route);
+  expect(errors).toEqual([]);
+});
+
+test('keeps every page axe-clean at serious and critical impact', async ({ page }) => {
+  for (const route of ['/', '/privacy/', '/terms/']) {
+    await page.goto(route);
+    const results = await new AxeBuilder({ page }).analyze();
+    expect(results.violations.filter((violation) => ['serious', 'critical'].includes(violation.impact ?? ''))).toEqual([]);
   }
 });
 
@@ -70,6 +103,18 @@ test('reloads from the offline shell', async ({ page, context }, testInfo) => {
   await page.goto('/');
   await page.evaluate(async () => { await navigator.serviceWorker.ready; });
   await page.reload();
+  const workerState = await page.evaluate(async () => {
+    const registration = await navigator.serviceWorker.ready;
+    await registration.update();
+    return {
+      controlled: Boolean(navigator.serviceWorker.controller),
+      waiting: Boolean(registration.waiting),
+      caches: await caches.keys()
+    };
+  });
+  expect(workerState.controlled).toBe(true);
+  expect(workerState.waiting).toBe(false);
+  expect(workerState.caches).toEqual(['tab-playbook-v2']);
   await context.setOffline(true);
   await page.reload();
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Make the neck');

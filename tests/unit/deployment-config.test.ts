@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
@@ -32,11 +33,17 @@ describe('Azure Static Web Apps response policy', () => {
     expect(policy).toContain("worker-src 'self'");
     expect(policy).toContain("object-src 'none'");
     expect(policy).toContain("frame-ancestors 'none'");
+    expect(policy).not.toContain("'unsafe-inline'");
+    expect(readFileSync(resolve(root, 'src/main.ts'), 'utf8')).not.toContain('style=');
   });
 
   it('ships only content-hashed immutable files below the asset route', () => {
     const names = readdirSync(resolve(root, 'public/assets'));
     expect(names).toHaveLength(5);
-    expect(names.every((name) => /-[a-f0-9]{12}\.(avif|webp|svg)$/.test(name))).toBe(true);
+    for (const name of names) {
+      const bytes = readFileSync(resolve(root, 'public/assets', name));
+      const digest = createHash('sha256').update(bytes).digest('hex').slice(0, 12);
+      expect(name).toMatch(new RegExp(`-${digest}\\.(avif|webp|svg)$`));
+    }
   });
 });
