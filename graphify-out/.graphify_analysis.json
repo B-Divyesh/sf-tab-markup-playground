@@ -1,6 +1,33 @@
 {
   "communities": {
     "0": [
+      "src_main",
+      "src_main_activatetab",
+      "src_main_editor",
+      "src_main_emptymarkup",
+      "src_main_escapehtml",
+      "src_main_fretboardhtml",
+      "src_main_linenumbers",
+      "src_main_panels",
+      "src_main_render",
+      "src_main_renderchords",
+      "src_main_renderfretboard",
+      "src_main_renderintervals",
+      "src_main_renderscale",
+      "src_main_savedraft",
+      "src_main_shiftedchord",
+      "src_main_status",
+      "src_main_tabs",
+      "src_main_transpose",
+      "src_main_updatelines",
+      "src_main_updatenetwork",
+      "src_main_viewheading",
+      "src_music_chordname",
+      "src_music_majorscale",
+      "src_music_notename",
+      "src_music_romannumeral"
+    ],
+    "1": [
       "ref_dom",
       "ref_dom_iterable",
       "ref_es2022",
@@ -22,7 +49,7 @@
       "tsconfig_compileroptions_usedefineforclassfields",
       "tsconfig_include"
     ],
-    "1": [
+    "2": [
       "src_music",
       "src_music_chordintervals",
       "src_music_chordtones",
@@ -43,43 +70,7 @@
       "src_music_transposemarkup",
       "tests_unit_music_test"
     ],
-    "2": [
-      "src_main",
-      "src_main_activatetab",
-      "src_main_copysharelink",
-      "src_main_copytext",
-      "src_main_editor",
-      "src_main_initialvalue",
-      "src_main_linenumbers",
-      "src_main_panels",
-      "src_main_sharefromhash",
-      "src_main_showtoast",
-      "src_main_status",
-      "src_main_tabs",
-      "src_main_transpose",
-      "src_main_updatenetwork",
-      "src_music_decodeshare",
-      "src_music_encodeshare"
-    ],
     "3": [
-      "src_main_emptymarkup",
-      "src_main_escapehtml",
-      "src_main_fretboardhtml",
-      "src_main_render",
-      "src_main_renderchords",
-      "src_main_renderfretboard",
-      "src_main_renderintervals",
-      "src_main_renderscale",
-      "src_main_savedraft",
-      "src_main_shiftedchord",
-      "src_main_updatelines",
-      "src_main_viewheading",
-      "src_music_chordname",
-      "src_music_majorscale",
-      "src_music_notename",
-      "src_music_romannumeral"
-    ],
-    "4": [
       "axe_core_playwright",
       "package_devdependencies",
       "package_devdependencies_axe_core_playwright",
@@ -96,7 +87,7 @@
       "vite",
       "vitest"
     ],
-    "5": [
+    "4": [
       "package",
       "package_name",
       "package_private",
@@ -109,6 +100,12 @@
       "package_type",
       "package_version"
     ],
+    "5": [
+      "src_main_copysharelink",
+      "src_main_copytext",
+      "src_main_showtoast",
+      "src_music_encodeshare"
+    ],
     "6": [
       "tests_unit_deployment_config_test",
       "tests_unit_deployment_config_test_config",
@@ -116,37 +113,44 @@
       "tests_unit_deployment_config_test_staticwebappsconfig"
     ],
     "7": [
+      "src_main_initialvalue",
+      "src_main_sharefromhash",
+      "src_music_decodeshare"
+    ],
+    "8": [
       "test",
       "tests_e2e_app_spec",
       "tests_e2e_app_spec_expectminimumtargets"
     ],
-    "8": [
+    "9": [
       "public_sw",
       "public_sw_pages"
     ],
-    "9": [
-      "playwright_config"
-    ],
     "10": [
-      "src_legal"
+      "vite_config",
+      "vite_config_staticwebappconfig"
     ],
     "11": [
-      "vite_config"
+      "playwright_config"
+    ],
+    "12": [
+      "src_legal"
     ]
   },
   "cohesion": {
-    "0": 0.1,
-    "1": 0.1695906432748538,
-    "2": 0.175,
-    "3": 0.2916666666666667,
-    "4": 0.13333333333333333,
-    "5": 0.18181818181818182,
+    "0": 0.19666666666666666,
+    "1": 0.1,
+    "2": 0.1695906432748538,
+    "3": 0.13333333333333333,
+    "4": 0.18181818181818182,
+    "5": 0.6666666666666666,
     "6": 0.5,
     "7": 0.6666666666666666,
-    "8": 1.0,
+    "8": 0.6666666666666666,
     "9": 1.0,
     "10": 1.0,
-    "11": 1.0
+    "11": 1.0,
+    "12": 1.0
   },
   "gods": [
     {
@@ -175,13 +179,13 @@
       "degree": 8
     },
     {
-      "id": "src_main_render",
-      "label": "render()",
+      "id": "src_music_chordname",
+      "label": "chordName()",
       "degree": 8
     },
     {
-      "id": "src_music_chordname",
-      "label": "chordName()",
+      "id": "src_main_render",
+      "label": "render()",
       "degree": 8
     },
     {
@@ -195,23 +199,12 @@
       "degree": 7
     },
     {
-      "id": "src_main_renderintervals",
-      "label": "renderIntervals()",
+      "id": "src_main_viewheading",
+      "label": "viewHeading()",
       "degree": 7
     }
   ],
   "surprises": [
-    {
-      "source": "copyShareLink()",
-      "target": "parseMarkup()",
-      "source_files": [
-        "src/main.ts",
-        "src/music.ts"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
-    },
     {
       "source": "renderChords()",
       "target": "chordTones()",
@@ -226,6 +219,17 @@
     {
       "source": "renderFretboard()",
       "target": "chordTones()",
+      "source_files": [
+        "src/main.ts",
+        "src/music.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "copyShareLink()",
+      "target": "parseMarkup()",
       "source_files": [
         "src/main.ts",
         "src/music.ts"

@@ -9,7 +9,7 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 1,
+      "community": 2,
       "file_type": "code",
       "norm_label": "exercise",
       "source_file": "src/music.ts",
@@ -21,7 +21,7 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 1,
+      "community": 2,
       "file_type": "code",
       "norm_label": "parsedchord",
       "source_file": "src/music.ts",
@@ -33,7 +33,7 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 1,
+      "community": 2,
       "file_type": "code",
       "norm_label": "parseerror",
       "source_file": "src/music.ts",
@@ -49,190 +49,25 @@
       "file_type": "code",
       "norm_label": "staticwebappsconfig",
       "source_file": "tests/unit/deployment-config.test.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_music_chordintervals",
-      "label": "chordIntervals()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "chordintervals()",
-      "source_file": "src/music.ts",
-      "source_location": "L131"
-    },
-    {
-      "id": "src_music_chordtones",
-      "label": "chordTones()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "chordtones()",
-      "source_file": "src/music.ts",
-      "source_location": "L145"
-    },
-    {
-      "id": "src_music_cleannote",
-      "label": "cleanNote()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "cleannote()",
-      "source_file": "src/music.ts",
-      "source_location": "L50"
-    },
-    {
-      "id": "src_music_notenumber",
-      "label": "noteNumber()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "notenumber()",
-      "source_file": "src/music.ts",
-      "source_location": "L54"
-    },
-    {
-      "id": "src_music_parsechord",
-      "label": "parseChord()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "parsechord()",
-      "source_file": "src/music.ts",
-      "source_location": "L62"
-    },
-    {
-      "id": "src_music_parsemarkup",
-      "label": "parseMarkup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "parsemarkup()",
-      "source_file": "src/music.ts",
-      "source_location": "L71"
-    },
-    {
-      "id": "src_music_transposemarkup",
-      "label": "transposeMarkup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "transposemarkup()",
-      "source_file": "src/music.ts",
-      "source_location": "L170"
+      "source_location": "L6"
     },
     {
       "id": "src_main_activatetab",
       "label": "activateTab()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "activatetab()",
       "source_file": "src/main.ts",
-      "source_location": "L232"
-    },
-    {
-      "id": "src_main_copysharelink",
-      "label": "copyShareLink()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "copysharelink()",
-      "source_file": "src/main.ts",
-      "source_location": "L176"
-    },
-    {
-      "id": "src_main_copytext",
-      "label": "copyText()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "copytext()",
-      "source_file": "src/main.ts",
-      "source_location": "L165"
-    },
-    {
-      "id": "src_main_initialvalue",
-      "label": "initialValue()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "initialvalue()",
-      "source_file": "src/main.ts",
-      "source_location": "L37"
-    },
-    {
-      "id": "src_main_sharefromhash",
-      "label": "shareFromHash()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "sharefromhash()",
-      "source_file": "src/main.ts",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_main_showtoast",
-      "label": "showToast()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "showtoast()",
-      "source_file": "src/main.ts",
-      "source_location": "L53"
-    },
-    {
-      "id": "src_main_updatenetwork",
-      "label": "updateNetwork()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "updatenetwork()",
-      "source_file": "src/main.ts",
-      "source_location": "L241"
-    },
-    {
-      "id": "src_music_decodeshare",
-      "label": "decodeShare()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "decodeshare()",
-      "source_file": "src/music.ts",
-      "source_location": "L193"
-    },
-    {
-      "id": "src_music_encodeshare",
-      "label": "encodeShare()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "file_type": "code",
-      "norm_label": "encodeshare()",
-      "source_file": "src/music.ts",
-      "source_location": "L186"
+      "source_location": "L231"
     },
     {
       "id": "src_main_emptymarkup",
       "label": "emptyMarkup()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "emptymarkup()",
       "source_file": "src/main.ts",
@@ -243,7 +78,7 @@
       "label": "escapeHtml()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "src/main.ts",
@@ -254,29 +89,29 @@
       "label": "fretboardHtml()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "fretboardhtml()",
       "source_file": "src/main.ts",
-      "source_location": "L92"
+      "source_location": "L91"
     },
     {
       "id": "src_main_render",
       "label": "render()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "render()",
       "source_file": "src/main.ts",
-      "source_location": "L143"
+      "source_location": "L142"
     },
     {
       "id": "src_main_renderchords",
       "label": "renderChords()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "renderchords()",
       "source_file": "src/main.ts",
@@ -287,40 +122,40 @@
       "label": "renderFretboard()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "renderfretboard()",
       "source_file": "src/main.ts",
-      "source_location": "L112"
+      "source_location": "L111"
     },
     {
       "id": "src_main_renderintervals",
       "label": "renderIntervals()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "renderintervals()",
       "source_file": "src/main.ts",
-      "source_location": "L127"
+      "source_location": "L126"
     },
     {
       "id": "src_main_renderscale",
       "label": "renderScale()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "renderscale()",
       "source_file": "src/main.ts",
-      "source_location": "L134"
+      "source_location": "L133"
     },
     {
       "id": "src_main_savedraft",
       "label": "saveDraft()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "savedraft()",
       "source_file": "src/main.ts",
@@ -331,7 +166,7 @@
       "label": "shiftedChord()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "shiftedchord()",
       "source_file": "src/main.ts",
@@ -342,18 +177,29 @@
       "label": "updateLines()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "updatelines()",
       "source_file": "src/main.ts",
       "source_location": "L62"
     },
     {
+      "id": "src_main_updatenetwork",
+      "label": "updateNetwork()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "updatenetwork()",
+      "source_file": "src/main.ts",
+      "source_location": "L240"
+    },
+    {
       "id": "src_main_viewheading",
       "label": "viewHeading()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "viewheading()",
       "source_file": "src/main.ts",
@@ -364,7 +210,7 @@
       "label": "chordName()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "chordname()",
       "source_file": "src/music.ts",
@@ -375,7 +221,7 @@
       "label": "majorScale()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "majorscale()",
       "source_file": "src/music.ts",
@@ -386,7 +232,7 @@
       "label": "noteName()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "notename()",
       "source_file": "src/music.ts",
@@ -397,338 +243,182 @@
       "label": "romanNumeral()",
       "_callable": true,
       "_origin": "ast",
-      "community": 3,
+      "community": 0,
       "file_type": "code",
       "norm_label": "romannumeral()",
       "source_file": "src/music.ts",
       "source_location": "L155"
     },
     {
+      "id": "src_music_chordintervals",
+      "label": "chordIntervals()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "chordintervals()",
+      "source_file": "src/music.ts",
+      "source_location": "L131"
+    },
+    {
+      "id": "src_music_chordtones",
+      "label": "chordTones()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "chordtones()",
+      "source_file": "src/music.ts",
+      "source_location": "L145"
+    },
+    {
+      "id": "src_music_cleannote",
+      "label": "cleanNote()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "cleannote()",
+      "source_file": "src/music.ts",
+      "source_location": "L50"
+    },
+    {
+      "id": "src_music_notenumber",
+      "label": "noteNumber()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "notenumber()",
+      "source_file": "src/music.ts",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_music_parsechord",
+      "label": "parseChord()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "parsechord()",
+      "source_file": "src/music.ts",
+      "source_location": "L62"
+    },
+    {
+      "id": "src_music_parsemarkup",
+      "label": "parseMarkup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "parsemarkup()",
+      "source_file": "src/music.ts",
+      "source_location": "L71"
+    },
+    {
+      "id": "src_music_transposemarkup",
+      "label": "transposeMarkup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "transposemarkup()",
+      "source_file": "src/music.ts",
+      "source_location": "L170"
+    },
+    {
+      "id": "src_main_copysharelink",
+      "label": "copyShareLink()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "copysharelink()",
+      "source_file": "src/main.ts",
+      "source_location": "L175"
+    },
+    {
+      "id": "src_main_copytext",
+      "label": "copyText()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "copytext()",
+      "source_file": "src/main.ts",
+      "source_location": "L164"
+    },
+    {
+      "id": "src_main_showtoast",
+      "label": "showToast()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "showtoast()",
+      "source_file": "src/main.ts",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_music_encodeshare",
+      "label": "encodeShare()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "encodeshare()",
+      "source_file": "src/music.ts",
+      "source_location": "L186"
+    },
+    {
+      "id": "src_main_initialvalue",
+      "label": "initialValue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "initialvalue()",
+      "source_file": "src/main.ts",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_main_sharefromhash",
+      "label": "shareFromHash()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "sharefromhash()",
+      "source_file": "src/main.ts",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_music_decodeshare",
+      "label": "decodeShare()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "decodeshare()",
+      "source_file": "src/music.ts",
+      "source_location": "L193"
+    },
+    {
       "id": "tests_e2e_app_spec_expectminimumtargets",
       "label": "expectMinimumTargets()",
       "_callable": true,
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "file_type": "code",
       "norm_label": "expectminimumtargets()",
       "source_file": "tests/e2e/app.spec.ts",
       "source_location": "L4"
     },
     {
-      "id": "tsconfig",
-      "label": "tsconfig.json",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "tsconfig.json",
-      "source_file": "tsconfig.json",
-      "source_location": "L1"
-    },
-    {
-      "id": "tsconfig_compileroptions",
-      "label": "compilerOptions",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "compileroptions",
-      "source_file": "tsconfig.json",
-      "source_location": "L2"
-    },
-    {
-      "id": "tsconfig_compileroptions_allowimportingtsextensions",
-      "label": "allowImportingTsExtensions",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "allowimportingtsextensions",
-      "source_file": "tsconfig.json",
-      "source_location": "L9"
-    },
-    {
-      "id": "tsconfig_compileroptions_isolatedmodules",
-      "label": "isolatedModules",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "isolatedmodules",
-      "source_file": "tsconfig.json",
-      "source_location": "L10"
-    },
-    {
-      "id": "tsconfig_compileroptions_lib",
-      "label": "lib",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "lib",
-      "source_file": "tsconfig.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "tsconfig_compileroptions_module",
-      "label": "module",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "module",
-      "source_file": "tsconfig.json",
-      "source_location": "L5"
-    },
-    {
-      "id": "tsconfig_compileroptions_moduledetection",
-      "label": "moduleDetection",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "moduledetection",
-      "source_file": "tsconfig.json",
-      "source_location": "L11"
-    },
-    {
-      "id": "tsconfig_compileroptions_moduleresolution",
-      "label": "moduleResolution",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "moduleresolution",
-      "source_file": "tsconfig.json",
-      "source_location": "L8"
-    },
-    {
-      "id": "tsconfig_compileroptions_noemit",
-      "label": "noEmit",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "noemit",
-      "source_file": "tsconfig.json",
-      "source_location": "L12"
-    },
-    {
-      "id": "tsconfig_compileroptions_skiplibcheck",
-      "label": "skipLibCheck",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "skiplibcheck",
-      "source_file": "tsconfig.json",
-      "source_location": "L7"
-    },
-    {
-      "id": "tsconfig_compileroptions_strict",
-      "label": "strict",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "strict",
-      "source_file": "tsconfig.json",
-      "source_location": "L13"
-    },
-    {
-      "id": "tsconfig_compileroptions_target",
-      "label": "target",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "target",
-      "source_file": "tsconfig.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "tsconfig_compileroptions_usedefineforclassfields",
-      "label": "useDefineForClassFields",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "usedefineforclassfields",
-      "source_file": "tsconfig.json",
-      "source_location": "L4"
-    },
-    {
-      "id": "tsconfig_include",
-      "label": "include",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "code",
-      "norm_label": "include",
-      "source_file": "tsconfig.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "ref_dom",
-      "label": "DOM",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "concept",
-      "norm_label": "dom",
-      "source_file": "tsconfig.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "ref_dom_iterable",
-      "label": "DOM.Iterable",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "concept",
-      "norm_label": "dom.iterable",
-      "source_file": "tsconfig.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "ref_es2022",
-      "label": "ES2022",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "concept",
-      "norm_label": "es2022",
-      "source_file": "tsconfig.json",
-      "source_location": "L6"
-    },
-    {
-      "id": "ref_src",
-      "label": "src",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "concept",
-      "norm_label": "src",
-      "source_file": "tsconfig.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "ref_tests",
-      "label": "tests",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "concept",
-      "norm_label": "tests",
-      "source_file": "tsconfig.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "ref_vite_config_ts",
-      "label": "vite.config.ts",
-      "_origin": "ast",
-      "community": 0,
-      "file_type": "concept",
-      "norm_label": "vite.config.ts",
-      "source_file": "tsconfig.json",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_music",
-      "label": "music.ts",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "music.ts",
-      "source_file": "src/music.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_music_default_markup",
-      "label": "DEFAULT_MARKUP",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "default_markup",
-      "source_file": "src/music.ts",
-      "source_location": "L28"
-    },
-    {
-      "id": "src_music_major_scale",
-      "label": "MAJOR_SCALE",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "major_scale",
-      "source_file": "src/music.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_music_note_lookup",
-      "label": "NOTE_LOOKUP",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "note_lookup",
-      "source_file": "src/music.ts",
-      "source_location": "L2"
-    },
-    {
-      "id": "src_music_notes_sharp",
-      "label": "NOTES_SHARP",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "notes_sharp",
-      "source_file": "src/music.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_music_public_domain_markup",
-      "label": "PUBLIC_DOMAIN_MARKUP",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "public_domain_markup",
-      "source_file": "src/music.ts",
-      "source_location": "L39"
-    },
-    {
-      "id": "src_music_romans",
-      "label": "ROMANS",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "romans",
-      "source_file": "src/music.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_music_scale_degrees",
-      "label": "SCALE_DEGREES",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "scale_degrees",
-      "source_file": "src/music.ts",
-      "source_location": "L10"
-    },
-    {
-      "id": "tests_unit_music_test",
-      "label": "music.test.ts",
-      "_origin": "ast",
-      "community": 1,
-      "file_type": "code",
-      "norm_label": "music.test.ts",
-      "source_file": "tests/unit/music.test.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_legal",
-      "label": "legal.ts",
-      "_origin": "ast",
-      "community": 10,
-      "file_type": "code",
-      "norm_label": "legal.ts",
-      "source_file": "src/legal.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "vite_config",
-      "label": "vite.config.ts",
-      "_origin": "ast",
-      "community": 11,
-      "file_type": "code",
-      "norm_label": "vite.config.ts",
-      "source_file": "vite.config.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "src_main",
       "label": "main.ts",
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "main.ts",
       "source_file": "src/main.ts",
@@ -738,7 +428,7 @@
       "id": "src_main_editor",
       "label": "editor",
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "editor",
       "source_file": "src/main.ts",
@@ -748,7 +438,7 @@
       "id": "src_main_linenumbers",
       "label": "lineNumbers",
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "linenumbers",
       "source_file": "src/main.ts",
@@ -758,7 +448,7 @@
       "id": "src_main_panels",
       "label": "panels",
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "panels",
       "source_file": "src/main.ts",
@@ -768,7 +458,7 @@
       "id": "src_main_status",
       "label": "status",
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "status",
       "source_file": "src/main.ts",
@@ -778,7 +468,7 @@
       "id": "src_main_tabs",
       "label": "tabs",
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "tabs",
       "source_file": "src/main.ts",
@@ -788,17 +478,347 @@
       "id": "src_main_transpose",
       "label": "transpose",
       "_origin": "ast",
-      "community": 2,
+      "community": 0,
       "file_type": "code",
       "norm_label": "transpose",
       "source_file": "src/main.ts",
       "source_location": "L17"
     },
     {
+      "id": "tsconfig",
+      "label": "tsconfig.json",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "tsconfig.json",
+      "source_file": "tsconfig.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "compileroptions",
+      "source_file": "tsconfig.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "tsconfig_compileroptions_allowimportingtsextensions",
+      "label": "allowImportingTsExtensions",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "allowimportingtsextensions",
+      "source_file": "tsconfig.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "tsconfig_compileroptions_isolatedmodules",
+      "label": "isolatedModules",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "isolatedmodules",
+      "source_file": "tsconfig.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "tsconfig_compileroptions_lib",
+      "label": "lib",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "lib",
+      "source_file": "tsconfig.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "tsconfig_compileroptions_module",
+      "label": "module",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "module",
+      "source_file": "tsconfig.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "tsconfig_compileroptions_moduledetection",
+      "label": "moduleDetection",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "moduledetection",
+      "source_file": "tsconfig.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "tsconfig_compileroptions_moduleresolution",
+      "label": "moduleResolution",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "moduleresolution",
+      "source_file": "tsconfig.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "tsconfig_compileroptions_noemit",
+      "label": "noEmit",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "noemit",
+      "source_file": "tsconfig.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "tsconfig_compileroptions_skiplibcheck",
+      "label": "skipLibCheck",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "skiplibcheck",
+      "source_file": "tsconfig.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "tsconfig_compileroptions_strict",
+      "label": "strict",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "strict",
+      "source_file": "tsconfig.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "tsconfig_compileroptions_target",
+      "label": "target",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "target",
+      "source_file": "tsconfig.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "tsconfig_compileroptions_usedefineforclassfields",
+      "label": "useDefineForClassFields",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "usedefineforclassfields",
+      "source_file": "tsconfig.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "include",
+      "source_file": "tsconfig.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "ref_dom",
+      "label": "DOM",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "dom",
+      "source_file": "tsconfig.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "ref_dom_iterable",
+      "label": "DOM.Iterable",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "dom.iterable",
+      "source_file": "tsconfig.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "ref_es2022",
+      "label": "ES2022",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "es2022",
+      "source_file": "tsconfig.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "ref_src",
+      "label": "src",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "src",
+      "source_file": "tsconfig.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "ref_tests",
+      "label": "tests",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "tests",
+      "source_file": "tsconfig.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "ref_vite_config_ts",
+      "label": "vite.config.ts",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "vite.config.ts",
+      "source_file": "tsconfig.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "vite_config",
+      "label": "vite.config.ts",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "vite.config.ts",
+      "source_file": "vite.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "vite_config_staticwebappconfig",
+      "label": "staticWebAppConfig",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "staticwebappconfig",
+      "source_file": "vite.config.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "playwright_config",
+      "label": "playwright.config.ts",
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "norm_label": "playwright.config.ts",
+      "source_file": "playwright.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_legal",
+      "label": "legal.ts",
+      "_origin": "ast",
+      "community": 12,
+      "file_type": "code",
+      "norm_label": "legal.ts",
+      "source_file": "src/legal.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_music",
+      "label": "music.ts",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "music.ts",
+      "source_file": "src/music.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_music_default_markup",
+      "label": "DEFAULT_MARKUP",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "default_markup",
+      "source_file": "src/music.ts",
+      "source_location": "L28"
+    },
+    {
+      "id": "src_music_major_scale",
+      "label": "MAJOR_SCALE",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "major_scale",
+      "source_file": "src/music.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_music_note_lookup",
+      "label": "NOTE_LOOKUP",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "note_lookup",
+      "source_file": "src/music.ts",
+      "source_location": "L2"
+    },
+    {
+      "id": "src_music_notes_sharp",
+      "label": "NOTES_SHARP",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "notes_sharp",
+      "source_file": "src/music.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_music_public_domain_markup",
+      "label": "PUBLIC_DOMAIN_MARKUP",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "public_domain_markup",
+      "source_file": "src/music.ts",
+      "source_location": "L39"
+    },
+    {
+      "id": "src_music_romans",
+      "label": "ROMANS",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "romans",
+      "source_file": "src/music.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_music_scale_degrees",
+      "label": "SCALE_DEGREES",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "scale_degrees",
+      "source_file": "src/music.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "tests_unit_music_test",
+      "label": "music.test.ts",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "music.test.ts",
+      "source_file": "tests/unit/music.test.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "package_devdependencies",
       "label": "devDependencies",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "devdependencies",
       "source_file": "package.json",
@@ -808,7 +828,7 @@
       "id": "package_devdependencies_axe_core_playwright",
       "label": "@axe-core/playwright",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "@axe-core/playwright",
       "source_file": "package.json",
@@ -818,7 +838,7 @@
       "id": "package_devdependencies_playwright_core",
       "label": "playwright-core",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "playwright-core",
       "source_file": "package.json",
@@ -828,7 +848,7 @@
       "id": "package_devdependencies_playwright_test",
       "label": "@playwright/test",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
@@ -838,7 +858,7 @@
       "id": "package_devdependencies_types_node",
       "label": "@types/node",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "@types/node",
       "source_file": "package.json",
@@ -848,7 +868,7 @@
       "id": "package_devdependencies_typescript",
       "label": "typescript",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "typescript",
       "source_file": "package.json",
@@ -858,7 +878,7 @@
       "id": "package_devdependencies_vite",
       "label": "vite",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "vite",
       "source_file": "package.json",
@@ -868,7 +888,7 @@
       "id": "package_devdependencies_vitest",
       "label": "vitest",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "code",
       "norm_label": "vitest",
       "source_file": "package.json",
@@ -878,7 +898,7 @@
       "id": "axe_core_playwright",
       "label": "@axe-core/playwright",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "concept",
       "norm_label": "@axe-core/playwright",
       "source_file": "package.json",
@@ -888,7 +908,7 @@
       "id": "playwright_core",
       "label": "playwright-core",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "concept",
       "norm_label": "playwright-core",
       "source_file": "package.json",
@@ -898,7 +918,7 @@
       "id": "playwright_test",
       "label": "@playwright/test",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "concept",
       "norm_label": "@playwright/test",
       "source_file": "package.json",
@@ -908,7 +928,7 @@
       "id": "types_node",
       "label": "@types/node",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "concept",
       "norm_label": "@types/node",
       "source_file": "package.json",
@@ -918,7 +938,7 @@
       "id": "typescript",
       "label": "typescript",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "concept",
       "norm_label": "typescript",
       "source_file": "package.json",
@@ -928,7 +948,7 @@
       "id": "vite",
       "label": "vite",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "concept",
       "norm_label": "vite",
       "source_file": "package.json",
@@ -938,7 +958,7 @@
       "id": "vitest",
       "label": "vitest",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "file_type": "concept",
       "norm_label": "vitest",
       "source_file": "package.json",
@@ -948,7 +968,7 @@
       "id": "package",
       "label": "package.json",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "package.json",
       "source_file": "package.json",
@@ -958,7 +978,7 @@
       "id": "package_name",
       "label": "name",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "name",
       "source_file": "package.json",
@@ -968,7 +988,7 @@
       "id": "package_private",
       "label": "private",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "private",
       "source_file": "package.json",
@@ -978,7 +998,7 @@
       "id": "package_scripts",
       "label": "scripts",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "scripts",
       "source_file": "package.json",
@@ -988,7 +1008,7 @@
       "id": "package_scripts_build",
       "label": "build",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "build",
       "source_file": "package.json",
@@ -998,7 +1018,7 @@
       "id": "package_scripts_dev",
       "label": "dev",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "dev",
       "source_file": "package.json",
@@ -1008,7 +1028,7 @@
       "id": "package_scripts_preview",
       "label": "preview",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "preview",
       "source_file": "package.json",
@@ -1018,7 +1038,7 @@
       "id": "package_scripts_test",
       "label": "test",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "test",
       "source_file": "package.json",
@@ -1028,7 +1048,7 @@
       "id": "package_scripts_test_e2e",
       "label": "test:e2e",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "test:e2e",
       "source_file": "package.json",
@@ -1038,7 +1058,7 @@
       "id": "package_type",
       "label": "type",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "type",
       "source_file": "package.json",
@@ -1048,7 +1068,7 @@
       "id": "package_version",
       "label": "version",
       "_origin": "ast",
-      "community": 5,
+      "community": 4,
       "file_type": "code",
       "norm_label": "version",
       "source_file": "package.json",
@@ -1072,7 +1092,7 @@
       "file_type": "code",
       "norm_label": "config",
       "source_file": "tests/unit/deployment-config.test.ts",
-      "source_location": "L11"
+      "source_location": "L12"
     },
     {
       "id": "tests_unit_deployment_config_test_root",
@@ -1082,13 +1102,13 @@
       "file_type": "code",
       "norm_label": "root",
       "source_file": "tests/unit/deployment-config.test.ts",
-      "source_location": "L10"
+      "source_location": "L11"
     },
     {
       "id": "test",
       "label": "@playwright/test",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "confidence": "EXTRACTED",
       "file_type": "code",
       "norm_label": "@playwright/test",
@@ -1098,7 +1118,7 @@
       "id": "tests_e2e_app_spec",
       "label": "app.spec.ts",
       "_origin": "ast",
-      "community": 7,
+      "community": 8,
       "file_type": "code",
       "norm_label": "app.spec.ts",
       "source_file": "tests/e2e/app.spec.ts",
@@ -1108,7 +1128,7 @@
       "id": "public_sw",
       "label": "sw.js",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "file_type": "code",
       "norm_label": "sw.js",
       "source_file": "public/sw.js",
@@ -1118,21 +1138,11 @@
       "id": "public_sw_pages",
       "label": "PAGES",
       "_origin": "ast",
-      "community": 8,
+      "community": 9,
       "file_type": "code",
       "norm_label": "pages",
       "source_file": "public/sw.js",
       "source_location": "L2"
-    },
-    {
-      "id": "playwright_config",
-      "label": "playwright.config.ts",
-      "_origin": "ast",
-      "community": 9,
-      "file_type": "code",
-      "norm_label": "playwright.config.ts",
-      "source_file": "playwright.config.ts",
-      "source_location": "L1"
     }
   ],
   "links": [
@@ -1145,7 +1155,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L177",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -1157,7 +1167,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L179",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -1169,7 +1179,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L184",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -1181,7 +1191,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L185",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -1193,7 +1203,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L168",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -1205,7 +1215,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L103",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -1217,7 +1227,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L104",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -1241,7 +1251,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L144",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -1253,7 +1263,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L145",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -1265,7 +1275,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L158",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -1277,7 +1287,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L159",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -1289,7 +1299,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L160",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -1301,7 +1311,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L161",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -1313,7 +1323,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L162",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
@@ -1349,7 +1359,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -1361,7 +1371,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -1373,7 +1383,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -1385,7 +1395,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L89",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -1397,7 +1407,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L114",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -1409,7 +1419,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L116",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -1421,12 +1431,24 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L117",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
       "source": "src_main_renderfretboard",
       "target": "src_music_notename",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/main.ts",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "src_main_renderfretboard",
+      "target": "src_main_escapehtml",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -1438,18 +1460,6 @@
     },
     {
       "source": "src_main_renderfretboard",
-      "target": "src_main_escapehtml",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/main.ts",
-      "source_location": "L119",
-      "weight": 1.0
-    },
-    {
-      "source": "src_main_renderfretboard",
       "target": "src_music_chordname",
       "relation": "calls",
       "_origin": "ast",
@@ -1457,7 +1467,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L119",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -1469,7 +1479,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L120",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -1481,7 +1491,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L120",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -1493,7 +1503,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L129",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -1505,7 +1515,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L130",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -1517,7 +1527,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L130",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -1529,7 +1539,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L130",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -1541,7 +1551,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L131",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -1553,7 +1563,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L136",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -1565,7 +1575,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L137",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -1577,7 +1587,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L140",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -1589,7 +1599,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L140",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -1601,7 +1611,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/main.ts",
-      "source_location": "L140",
+      "source_location": "L139",
       "weight": 1.0
     },
     {
@@ -2445,7 +2455,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/main.ts",
-      "source_location": "L112",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -2456,7 +2466,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/main.ts",
-      "source_location": "L127",
+      "source_location": "L126",
       "weight": 1.0
     },
     {
@@ -2467,7 +2477,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/main.ts",
-      "source_location": "L134",
+      "source_location": "L133",
       "weight": 1.0
     },
     {
@@ -2511,7 +2521,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/main.ts",
-      "source_location": "L165",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -2555,7 +2565,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/main.ts",
-      "source_location": "L232",
+      "source_location": "L231",
       "weight": 1.0
     },
     {
@@ -2676,7 +2686,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/main.ts",
-      "source_location": "L92",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -2951,7 +2961,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/unit/deployment-config.test.ts",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -2962,7 +2972,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/unit/deployment-config.test.ts",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -2973,7 +2983,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/unit/deployment-config.test.ts",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -3120,6 +3130,17 @@
       "weight": 1.0
     },
     {
+      "source": "vite_config",
+      "target": "vite_config_staticwebappconfig",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "vite.config.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "tests_e2e_app_spec",
       "target": "test",
       "relation": "dynamic_import",
@@ -3137,7 +3158,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/main.ts",
-      "source_location": "L189",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -3149,7 +3170,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/main.ts",
-      "source_location": "L192",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -3161,7 +3182,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "src/main.ts",
-      "source_location": "L245",
+      "source_location": "L244",
       "weight": 1.0
     },
     {
@@ -3178,5 +3199,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8c66bbf5bffb9d0c2bd39d7e2d762f270c5b2b78"
+  "built_at_commit": "2c9a0ff72be8346b15b8fb42b497f6a3bf0bd3f1"
 }
