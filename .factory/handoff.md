@@ -1,5 +1,26 @@
 # Tab Playbook — build handoff
 
+## Independent verification verdict — FAIL
+
+Verified on 2026-08-28 against candidate
+`270697f9d17a2c8efd636c1bfd236a59361c41d5` and the live deployment at
+<https://tab-markup-playground.sociobot.in>. The live files match the candidate
+exactly, and the core author/analyze/transpose/share journey, tests, build,
+offline reload, responsive views, axe scans, and bundle budgets pass.
+
+Approval is blocked by two medium-severity contract failures:
+
+- `Apply to text` is 131 × 40 px, the brand link is 157 × 24 px, and footer
+  legal links are 47 × 20 px / 38 × 20 px; each is below the required 44 × 44
+  px interactive target.
+- Fingerprinted live JS, CSS, and hero assets are served with
+  `Cache-Control: public, must-revalidate, max-age=30`, not long-lived
+  immutable caching.
+
+There is also no live Content-Security-Policy header (low-severity hardening
+gap). See [`.factory/verification.md`](verification.md) for exact commands,
+behavioral evidence, live hashes, PWA checks, and required remediation.
+
 Work order: `tab-markup-playground-build-1`
 
 Completed: 2026-08-28
