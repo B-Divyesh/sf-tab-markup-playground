@@ -36,7 +36,7 @@ D|--2---2---3---0--|
 A|--3---0---3---2--|
 E|------x---1---3--|`;
 
-export const PUBLIC_DOMAIN_MARKUP = `@title Simple gifts — opening idea
+export const DEMO_MARKUP = `@title Four-bar G warmup
 @key G
 | G | C | G | D7 |
 

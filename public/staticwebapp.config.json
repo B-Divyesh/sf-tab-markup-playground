@@ -1,8 +1,4 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/privacy/*", "/terms/*", "/*.{css,js,json,webmanifest,svg,png,webp,avif}"]
-  },
   "globalHeaders": {
     "Cache-Control": "no-cache, max-age=0, must-revalidate",
     "Content-Security-Policy": "default-src 'self'; base-uri 'self'; connect-src 'self'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self'; manifest-src 'self'; object-src 'none'; script-src 'self'; style-src 'self'; worker-src 'self'",
@@ -11,6 +7,10 @@
     "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
   },
   "routes": [
+    {
+      "route": "/demo",
+      "rewrite": "/demo/index.html"
+    },
     {
       "route": "/assets/*",
       "headers": {
@@ -24,6 +24,12 @@
       }
     }
   ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
+  },
   "mimeTypes": {
     ".webmanifest": "application/manifest+json",
     ".avif": "image/avif"

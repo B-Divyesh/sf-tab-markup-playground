@@ -1,5 +1,5 @@
-const CACHE = 'tab-playbook-v2';
-const PAGES = ['/', '/index.html', '/privacy/', '/terms/'];
+const CACHE = 'tab-playbook-v3';
+const PAGES = ['/', '/index.html', '/demo/', '/privacy/', '/terms/', '/404.html'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
@@ -9,7 +9,12 @@ self.addEventListener('install', (event) => {
       const response = await fetch(page);
       await cache.put(page, response.clone());
       const html = await response.text();
-      for (const match of html.matchAll(/(?:src|href)="(\/[^"#]+)"/g)) assets.add(match[1]);
+      for (const match of html.matchAll(/(?:src|href|srcset)="([^"]+)"/g)) {
+        for (const candidate of match[1].split(',')) {
+          const path = candidate.trim().split(/\s+/)[0];
+          if (path.startsWith('/')) assets.add(path);
+        }
+      }
     }
     await cache.addAll([...assets]);
     await self.skipWaiting();

@@ -4,24 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#080b12" />
-    <meta name="description" content="Write guitar exercises in compact markup and inspect chords, fretboard notes, intervals, scales, and transpositions." />
-    <link rel="canonical" href="https://tab-markup-playground.sociobot.in/" />
+    <meta name="description" content="Try Tab Playbook with a four-bar guitar exercise and its chord, fretboard, interval, and scale views." />
+    <link rel="canonical" href="https://tab-markup-playground.sociobot.in/demo/" />
     <link rel="icon" href="/assets/icon-c1346c346bee.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-4cbebd35134d.png" sizes="180x180" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tab Playbook" />
-    <meta property="og:title" content="Tab Playbook — write guitar exercises" />
-    <meta property="og:description" content="Write guitar exercises in compact markup and inspect their harmony." />
-    <meta property="og:url" content="https://tab-markup-playground.sociobot.in/" />
+    <meta property="og:title" content="Demo — Tab Playbook" />
+    <meta property="og:description" content="Try a four-bar guitar exercise and inspect its harmony." />
+    <meta property="og:url" content="https://tab-markup-playground.sociobot.in/demo/" />
     <meta property="og:image" content="https://tab-markup-playground.sociobot.in/assets/social-26b2b6387016.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tab Playbook — write guitar exercises" />
-    <meta name="twitter:description" content="Write guitar exercises in compact markup and inspect their harmony." />
+    <meta name="twitter:title" content="Demo — Tab Playbook" />
+    <meta name="twitter:description" content="Try a four-bar guitar exercise and inspect its harmony." />
     <meta name="twitter:image" content="https://tab-markup-playground.sociobot.in/assets/social-26b2b6387016.png" />
-    <title>Tab Playbook — write guitar exercises</title>
+    <title>Demo — Tab Playbook</title>
   </head>
   <body>
     <a class="skip-link" href="#workbench">Skip to editor</a>
@@ -31,8 +31,8 @@
         <span>TAB PLAYBOOK</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#workbench">Editor</a>
-        <a href="/demo/">Demo</a>
+        <a href="/#workbench">Editor</a>
+        <a href="/demo/" aria-current="page">Demo</a>
         <a href="/privacy/">Privacy</a>
       </nav>
       <div class="header-status" aria-live="polite">
@@ -41,46 +41,31 @@
       </div>
     </header>
 
-    <main id="main">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy">
-          <p class="eyebrow">GUITAR MARKUP EDITOR</p>
-          <h1 id="page-title">Write and explain guitar exercises</h1>
-          <p class="lede">For guitar teachers, self-taught players, and tool builders who want a quick theory view.</p>
-          <div class="hero-actions">
-            <a class="jump-link" href="/demo/">Try it with sample data <span aria-hidden="true">→</span></a>
-            <p>Loads a four-bar exercise with chords, tab, and theory views.</p>
-          </div>
-          <ul class="hero-facts" aria-label="Product facts">
-            <li>Free core editor</li>
-            <li>Drafts stay in this browser</li>
-            <li>Works offline after the first visit</li>
-          </ul>
-        </div>
-        <figure class="hero-art">
-          <picture>
-            <source type="image/avif" srcset="/assets/hero-640-288e461a0630.avif 640w, /assets/hero-1024-64db8f330620.avif 1024w" sizes="(max-width: 800px) 100vw, 48vw" />
-            <source type="image/webp" srcset="/assets/hero-640-1890bd512524.webp 640w, /assets/hero-1024-84eeaebe74e9.webp 1024w" sizes="(max-width: 800px) 100vw, 48vw" />
-            <img src="/assets/hero-1024-84eeaebe74e9.webp" width="1024" height="683" alt="A guitar fretboard connected to a grid of chord and note positions" decoding="async" fetchpriority="high" />
-          </picture>
-          <figcaption>Guitar chord and fretboard map.</figcaption>
-        </figure>
-      </section>
+    <aside class="demo-banner" aria-label="Demo controls">
+      <p><strong>Demo</strong> — sample data, nothing is saved</p>
+      <div><button class="button" id="reset-demo" type="button">Reset demo</button><button class="button primary" id="start-real" type="button">Start for real</button></div>
+    </aside>
 
+    <main class="demo-main" id="main">
+      <section class="demo-intro" aria-labelledby="page-title">
+        <p class="eyebrow">SAMPLE EXERCISE</p>
+        <h1 id="page-title">Try a guitar exercise with sample data</h1>
+        <p>Inspect a four-bar G-major warmup, then reset it or start your own draft.</p>
+      </section>
       <section class="workbench" id="workbench" tabindex="-1" aria-labelledby="workbench-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">EDITOR</p>
-            <h2 id="workbench-title">Write an exercise and inspect the result</h2>
+            <h2 id="workbench-title">Sample exercise and theory views</h2>
           </div>
-          <p>Enter compact chord and tab markup. Switch between chords, fretboard notes, intervals, and the major scale.</p>
+          <p>The sample is editable here. It uses separate browser storage and never changes your real draft.</p>
         </div>
 
         <div class="deck-layout">
           <section class="editor-deck" aria-labelledby="editor-title">
             <div class="deck-titlebar">
               <div><span class="deck-index">01</span><h3 id="editor-title">Markup</h3></div>
-              <span class="save-state" id="save-state" role="status">Saved locally</span>
+              <span class="save-state" id="save-state" role="status">Saved in demo</span>
             </div>
             <label class="sr-only" for="markup">Exercise markup</label>
             <div class="editor-wrap">
@@ -100,7 +85,6 @@
             <div class="editor-actions">
               <button class="button primary" id="share-button" type="button">Copy share link</button>
               <button class="button" id="copy-markup" type="button">Copy markup</button>
-              <a class="button" href="/demo/">Open sample demo</a>
               <button class="button danger" id="clear-button" type="button">Clear</button>
             </div>
             <p class="shortcut-hint"><kbd>Ctrl</kbd> + <kbd>Enter</kbd> copies the share link</p>
@@ -133,23 +117,6 @@
             </div>
           </section>
         </div>
-      </section>
-
-      <section class="how-it-works" aria-labelledby="how-title">
-        <p class="eyebrow">THREE STEPS</p>
-        <h2 id="how-title">How it works</h2>
-        <ol class="steps">
-          <li><span>1</span><div><h3>Write chord and tab markup</h3><p>Add a title, key, chord bars, and optional tab strings.</p></div></li>
-          <li><span>2</span><div><h3>Inspect the harmony</h3><p>Choose chords, fretboard notes, intervals, or the major scale.</p></div></li>
-          <li><span>3</span><div><h3>Transpose and share</h3><p>Move the key, keep tab frets, and copy a link.</p></div></li>
-        </ol>
-      </section>
-
-      <section class="format-note" aria-labelledby="format-title">
-        <p class="eyebrow">SCOPE AND PRIVACY</p>
-        <h2 id="format-title">What this tool does not do</h2>
-        <p>It visualizes teaching exercises. It does not play audio, host song tabs, or engrave full scores.</p>
-        <p>Use original material or material you can share. Share links keep exercise text in the URL fragment.</p>
       </section>
     </main>
 

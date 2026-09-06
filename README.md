@@ -1,11 +1,13 @@
 # Tab Playbook
 
-Tab Playbook turns a compact guitar exercise into four learner-visible views:
-chord tones, a neck-wide fretboard map, Roman-numeral harmony, and the major
-scale. It is for guitar teachers, self-taught players, and music-tool builders
-who need something lighter than a notation suite.
+Tab Playbook lets guitar teachers, self-taught players, and music-tool builders
+write compact exercises and inspect their harmony. Markup shows chord,
+fretboard, interval, and scale views.
 
-Live: <https://tab-markup-playground.sociobot.in>
+Try the isolated sample at
+<https://tab-markup-playground.sociobot.in/demo/>. The sample has four bars and
+six tab strings. Its edits use separate browser storage and do not change a
+normal draft.
 
 ## Markup
 
@@ -22,41 +24,54 @@ A|--3---0---3---2--|
 E|------x---1---3--|
 ```
 
-Supported chord qualities are major, `m`, `7`, `maj7`, `m7`, `dim`, `aug`,
-`sus2`, and `sus4`, with optional slash bass notes. Tab lines are displayed as
-written; applying a transposition changes the key and chord symbols but leaves
-fret numbers unchanged.
+Supported chord forms are major, `m`, `7`, `maj7`, `m7`, `dim`, `aug`, `sus2`,
+and `sus4`, with optional slash bass notes. Transposing changes chord text and
+keeps tab fret numbers. Share links reload an exercise from the URL fragment,
+which keeps exercise text out of network requests.
 
-Drafts use browser local storage. Share links encode the exercise in the URL
-fragment, so no exercise text is uploaded. The product intentionally has no
-audio, song catalog, or full score engraving.
+Drafts stay in browser storage and persist after reload. Clear removes a draft
+and Undo clear restores it in the same session. The app works offline after its
+first visit and keeps editing available.
+
+The core editor is free to use without an account or payment step. It has no
+upload, advertising, analytics, or third-party requests. It has no audio
+playback, song catalog, or full-score engraving controls.
+
+Exercises up to 8,000 characters are shareable. Larger input shows a recovery
+message.
 
 ## Develop and verify
 
-Requires Node.js 20 or newer.
+Use Node.js 20 or newer. It builds the static entry point in `dist/index.html`.
 
 ```sh
 npm ci
-npm run dev
+npm audit --audit-level=high
 npm test
+npx tsc --noEmit
 npm run build
 npm run test:e2e
 ```
 
-The production command is exactly `npm run build`. It writes the static site to
-`dist/` with `dist/index.html` at its root. Preview it with `npm run preview`.
+`npm run test:e2e` builds `dist/` first and runs desktop and phone browser
+checks against the built files. Each public product claim is listed in
+[`.factory/claims.json`](.factory/claims.json). Run an individual claim command
+from that file to repeat its sandbox check.
+
+Preview the static build with:
+
+```sh
+npm run preview
+```
 
 ## Deploy
 
-Deploy `dist/` as an Azure Static Web App. `staticwebapp.config.json` is copied
-into the build and supplies navigation fallback, MIME types, a restrictive
-Content Security Policy, short-lived document/service-worker caching, and
-one-year immutable caching for content-hashed assets. No infrastructure,
-billing, analytics, or runtime secrets are needed.
+Deploy `dist/` as an Azure Static Web App. The static build serves restrictive
+response policies, immutable assets, and a designed 404 page.
 
-The interface design and asset provenance are documented in
-[`.factory/design.md`](.factory/design.md). The generated hero source and its
-prompt sidecar live in `assets/src/`.
+The visual system and original-asset provenance are documented in
+[`.factory/design.md`](.factory/design.md). Demo behavior is documented in
+[`.factory/demo.md`](.factory/demo.md).
 
 ## License
 

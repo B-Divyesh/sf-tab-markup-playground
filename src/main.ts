@@ -1,6 +1,6 @@
 import './styles.css';
 import {
-  DEFAULT_MARKUP, PUBLIC_DOMAIN_MARKUP, chordName, chordTones, decodeShare,
+  DEFAULT_MARKUP, DEMO_MARKUP, chordName, chordTones, decodeShare,
   encodeShare, majorScale, noteName, parseMarkup, romanNumeral, transposeMarkup,
   type Exercise, type ParsedChord
 } from './music.ts';
@@ -17,7 +17,8 @@ const lineNumbers = $('#line-numbers');
 const transpose = $<HTMLSelectElement>('#transpose');
 const panels = Array.from(document.querySelectorAll<HTMLElement>('[role="tabpanel"]'));
 const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
-const storageKey = 'tab-playbook:draft:v1';
+const isDemo = location.pathname === '/demo' || location.pathname.startsWith('/demo/');
+const storageKey = isDemo ? 'tab-playbook:demo:draft:v1' : 'tab-playbook:draft:v1';
 let selectedChord = 0;
 let clearUndo: string | null = null;
 let toastTimer = 0;
@@ -37,14 +38,15 @@ function shareFromHash(): { value: string | null; invalid: boolean } {
 function initialValue(): string {
   const shared = shareFromHash();
   if (shared.value !== null) return shared.value;
-  try { return localStorage.getItem(storageKey) ?? DEFAULT_MARKUP; }
-  catch { return DEFAULT_MARKUP; }
+  const fallback = isDemo ? DEMO_MARKUP : DEFAULT_MARKUP;
+  try { return localStorage.getItem(storageKey) ?? fallback; }
+  catch { return fallback; }
 }
 
 function saveDraft(): void {
   try {
     localStorage.setItem(storageKey, editor.value);
-    $('#save-state').textContent = 'Saved locally';
+    $('#save-state').textContent = isDemo ? 'Saved in demo' : 'Saved locally';
   } catch {
     $('#save-state').textContent = 'Storage unavailable';
   }
@@ -190,7 +192,6 @@ editor.addEventListener('scroll', () => { lineNumbers.scrollTop = editor.scrollT
 transpose.addEventListener('change', render);
 $('#share-button').addEventListener('click', copyShareLink);
 $('#copy-markup').addEventListener('click', () => void copyText(editor.value, 'Markup copied'));
-$('#example-button').addEventListener('click', () => { clearUndo = editor.value; editor.value = PUBLIC_DOMAIN_MARKUP; transpose.value = '0'; render(); showToast('Public-domain example loaded'); });
 $('#clear-button').addEventListener('click', () => {
   const clearButton = $<HTMLButtonElement>('#clear-button');
   if (editor.value) {
@@ -215,6 +216,19 @@ $('#apply-transpose').addEventListener('click', () => {
   render();
   showToast('Chord text and key transposed · tab fret numbers kept as written');
 });
+if (isDemo) {
+  $('#reset-demo').addEventListener('click', () => {
+    clearUndo = null;
+    editor.value = DEMO_MARKUP;
+    transpose.value = '0';
+    render();
+    showToast('Sample reset');
+  });
+  $('#start-real').addEventListener('click', () => {
+    try { localStorage.removeItem(storageKey); } catch { /* The normal editor remains independent. */ }
+    location.assign('/#workbench');
+  });
+}
 document.addEventListener('keydown', (event) => {
   if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') { event.preventDefault(); copyShareLink(); }
 });

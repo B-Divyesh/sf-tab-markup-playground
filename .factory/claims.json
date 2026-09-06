@@ -1,0 +1,114 @@
+[
+  {
+    "id": "demo-sample",
+    "claim": "Loads a four-bar sample with chord, tab, and theory output.",
+    "where": "Home action and demo page",
+    "test": "npm run test:e2e -- --grep @claim:demo-sample",
+    "sandbox": "Fresh browser context at /demo/; assert populated sample markup, chord cards, tab preview, and demo controls."
+  },
+  {
+    "id": "demo-isolation",
+    "claim": "Sample edits stay separate from a real draft.",
+    "where": "Demo banner and demo page",
+    "test": "npm run test:e2e -- --grep @claim:demo-isolation",
+    "sandbox": "Create a normal draft, edit and reset the demo, leave demo, and assert the normal draft is unchanged."
+  },
+  {
+    "id": "theory-views",
+    "claim": "Markup shows chord, fretboard, interval, and scale views.",
+    "where": "Home, demo, and README",
+    "test": "npm run test:e2e -- --grep @claim:theory-views",
+    "sandbox": "Fresh demo sample; select every theory tab and assert its populated output."
+  },
+  {
+    "id": "chord-forms",
+    "claim": "Major, minor, seventh, maj7, m7, diminished, augmented, sus2, sus4, and slash-bass chords are supported.",
+    "where": "README",
+    "test": "npm run test:e2e -- --grep @claim:chord-forms",
+    "sandbox": "Fresh demo; enter one of each documented chord form and assert ten rendered chord names."
+  },
+  {
+    "id": "transpose-keeps-tab",
+    "claim": "Transposing changes chord text and keeps tab fret numbers.",
+    "where": "Home, demo, and README",
+    "test": "npm run test:e2e -- --grep @claim:transpose-keeps-tab",
+    "sandbox": "Fresh demo; transpose a D exercise by two semitones and assert changed chords with unchanged tab text."
+  },
+  {
+    "id": "share-link",
+    "claim": "A share link reloads an exercise from the URL fragment.",
+    "where": "Home, demo, and README",
+    "test": "npm run test:e2e -- --grep @claim:share-link",
+    "sandbox": "Fresh demo; copy a share link and open it in a separate fresh browser context."
+  },
+  {
+    "id": "share-privacy",
+    "claim": "Share links keep exercise text out of network requests.",
+    "where": "Home, privacy page, and README",
+    "test": "npm run test:e2e -- --grep @claim:share-privacy",
+    "sandbox": "Record requests during a demo share action; assert same-origin URLs without exercise query or fragment text."
+  },
+  {
+    "id": "draft-persistence",
+    "claim": "Drafts stay in browser storage and persist after reload.",
+    "where": "Home, privacy page, and README",
+    "test": "npm run test:e2e -- --grep @claim:draft-persistence",
+    "sandbox": "Fresh demo; edit the draft, reload, and assert the edited markup and populated result remain."
+  },
+  {
+    "id": "clear-undo",
+    "claim": "Clear removes a draft and Undo clear restores it in the same session.",
+    "where": "Editor controls and privacy page",
+    "test": "npm run test:e2e -- --grep @claim:clear-undo",
+    "sandbox": "Fresh demo; clear the sample and undo the clear action."
+  },
+  {
+    "id": "offline-after-first-visit",
+    "claim": "Works offline after the first visit and keeps editing available.",
+    "where": "Home, header, and privacy page",
+    "test": "npm run test:e2e -- --grep @claim:offline-after-first-visit",
+    "sandbox": "Dedicated fresh browser context at /demo/; wait for the service worker, set offline, reload, and edit."
+  },
+  {
+    "id": "local-first",
+    "claim": "The editor has no account, upload, advertising, analytics, or third-party requests.",
+    "where": "Privacy page",
+    "test": "npm run test:e2e -- --grep @claim:local-first",
+    "sandbox": "Record the complete demo flow; assert GET-only same-origin requests and no account, upload, or payment controls."
+  },
+  {
+    "id": "scope",
+    "claim": "The tool has no audio playback, song catalog, or full-score engraving controls.",
+    "where": "Home and terms",
+    "test": "npm run test:e2e -- --grep @claim:scope",
+    "sandbox": "Fresh demo; assert no audio, video, catalog, or score controls, then inspect the stated scope on home."
+  },
+  {
+    "id": "size-limit",
+    "claim": "Exercises up to 8,000 characters are shareable; larger input gets a recovery message.",
+    "where": "Editor error state and README",
+    "test": "npm run test:e2e -- --grep @claim:size-limit",
+    "sandbox": "Fresh demo; share a valid 8,000-character exercise and assert the explicit error at 8,001 characters."
+  },
+  {
+    "id": "free-core",
+    "claim": "The core editor is free to use without a payment or account step.",
+    "where": "Home facts and footer",
+    "test": "npm run test:e2e -- --grep @claim:free-core",
+    "sandbox": "Fresh demo; assert the sample editor is immediately editable with no payment or account control."
+  },
+  {
+    "id": "clean-build",
+    "claim": "Node.js 20 or newer builds the static entry point in dist/index.html.",
+    "where": "README",
+    "test": "npm run test:build-claim",
+    "sandbox": "Installed clean checkout; build the product and assert the Node version and dist/index.html outcome."
+  },
+  {
+    "id": "deployment-policy",
+    "claim": "The static build serves restrictive response policies, immutable assets, and a designed 404 page.",
+    "where": "README",
+    "test": "npm run test:e2e -- --grep @claim:deployment-policy",
+    "sandbox": "Built static server; assert route titles, CSP, cache policies, and the deliberate 404 response."
+  }
+]
