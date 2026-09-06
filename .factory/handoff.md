@@ -10,6 +10,8 @@ Implementation SHA: `1d1e47f018800e6739f38d07600aef5b60b24e33`
 Documentation baseline: `1d1e47f018800e6739f38d07600aef5b60b24e33`
 The handoff report is committed separately after this deployed implementation;
 it does not require a new product image.
+Handoff-report commit: `6eadf588f7e655af264308b143a2a6d26e3da4d3`
+(report-only; the implementation above remains the deployed product image).
 
 Tab Playbook now lets guitar teachers, self-taught players, and music-tool
 builders write an exercise, inspect its theory views, transpose it, and share
