@@ -1,26 +1,46 @@
-# Tab Playbook review handoff
+# Tab Playbook repair handoff
 
-Work order: `tab-markup-playground-review-1`
-
-Reviewed: 2026-09-06
-
+Work order: `tab-markup-playground-repair-3`
+Completed: 2026-09-06
 Live URL: <https://tab-markup-playground.sociobot.in>
 
-Implementation: `12c4005d1372de54fb4952ef5406576c9cbbde1b`
+## Shipped implementation
 
-Documentation baseline: `7f0725431951260bf29fd2945e0c99a0644d5138`
+Implementation SHA: `1d1e47f018800e6739f38d07600aef5b60b24e33`
+Documentation baseline: `1d1e47f018800e6739f38d07600aef5b60b24e33`
+The handoff report is committed separately after this deployed implementation;
+it does not require a new product image.
 
-Checkout: `b84f243c29de8522c3cdbdcec61421335886fd5f`
+Tab Playbook now lets guitar teachers, self-taught players, and music-tool
+builders write an exercise, inspect its theory views, transpose it, and share
+it. The first action is **Try it with sample data**, which opens `/demo/` with
+a populated four-bar exercise.
 
-## Result
+## Review findings resolved
 
-**FAIL — 6 findings and 16 untested public claims.**
+- **F1, unsafe sample handling:** `/demo/` has the persistent **Demo — sample
+  data, nothing is saved** banner, Reset demo, and Start for real. Demo edits
+  use `tab-playbook:demo:draft:v1`; normal drafts use
+  `tab-playbook:draft:v1`. Reset and exit do not alter a normal draft.
+- **F2, missing claim tests:** `.factory/claims.json` declares 16 public
+  claims. Each has exactly one tagged outcome test and documented command.
+- **F3, first screen and page order:** the home page names the job, audience,
+  sample action, price/privacy/offline facts, three-step instructions, and
+  product scope. `.factory/copy-audit.md` records the sentence audit.
+- **F4, skip link:** Skip to editor targets and focuses the workbench.
+- **F5, routes and 404:** `/demo` and `/demo/` serve the demo title. Unknown
+  paths serve the designed `404.html` with HTTP 404.
+- **F6, metadata and structure:** every route has canonical, Open Graph,
+  Twitter, favicon/Apple-touch metadata, shared navigation and footer, and the
+  sitemap lists the demo route.
 
-The core editor works and the live files match the reviewed build. The release
-does not meet the current demo, claim, first-screen, skip-link, routing, and
-site-metadata contracts. See `.factory/review-1.md` for full evidence.
+Earlier verification findings remain repaired: all visible targets are at least
+44 px; hashed assets are immutable; documents and `sw.js` are revalidated; and
+the live CSP is self-only without inline styles.
 
-## Verification completed
+## Verification
+
+From a fresh detached checkout of the implementation SHA:
 
 ```sh
 npm ci
@@ -28,29 +48,50 @@ npm audit --audit-level=high
 npm test
 npx tsc --noEmit
 npm run build
+npm run test:build-claim
 npm run test:e2e
 ```
 
-The clean checkout passed 9 unit/config tests and 12 browser runs with 2
-intentional skips. The build produced `dist/`. Live desktop and phone checks
-covered sample loading, realistic populated output, normal author/transpose/
-share behavior, invalid input, 8,000/8,001-character boundaries, clear/undo,
-damaged-link recovery, keyboard and focus, reduced motion, Axe, offline/update,
-privacy traffic, links, route titles, legal pages, and unknown routes.
+- Install and audit completed with zero vulnerabilities.
+- Unit tests: 6 passed. Build-output claim: 1 passed.
+- Production build produced `dist/index.html`.
+- Browser suite: 39 passed, with 1 intentional mobile skip for the desktop-only
+  dedicated service-worker context.
+- All 16 commands listed in `.factory/claims.json` passed individually.
+- The browser suite covers normal authoring, invalid markup, 8,000/8,001
+  character boundaries, recovery, keyboard tabs, focus, links, titles, cache
+  headers, 404, privacy traffic, offline reload/update, reduced motion, touch
+  targets, and Axe.
 
-Lighthouse mobile scored 100 for performance, accessibility, best practices,
-and SEO. LCP was 1.1 s, TBT 0 ms, and CLS 0. The current live assets match the
-local production build by SHA-256.
+Live checks used fresh desktop (1440 × 1000) and phone (390 × 844) contexts.
+Both showed the job, audience, and sample action before scrolling. In each,
+the sample loaded populated chords and tab, the demo label persisted, reset
+restored the sample, and leaving demo preserved a real draft. No console errors
+occurred. Live offline verification found service-worker cache
+`tab-playbook-v3`, no waiting update, an offline reload, and editable markup.
 
-## Work left
+Live Axe scans found zero violations on `/`, `/demo/`, `/privacy/`, and
+`/terms/` at both sizes. Lighthouse 13.4.1 mobile scored 100 for Performance,
+Accessibility, Best Practices, and SEO (FCP 0.8 s, LCP 1.1 s, TBT 40 ms, CLS
+0).
 
-1. Add an isolated one-click demo with its required label, reset, exit, route,
-   storage namespace, and `.factory/demo.md`.
-2. Add `.factory/claims.json` and one tagged sandbox test for every retained
-   public claim.
-3. Rewrite and complete the first screen and landing-page order, then add
-   `.factory/copy-audit.md`.
-4. Repair the skip link, demo route, designed 404, route metadata, header,
-   footer, and sitemap.
+The production bundle is 12.27 KB JavaScript and 18.02 KB CSS before gzip; the
+largest initial hero asset is 15.3 KB AVIF. The 1200 × 630 social image is an
+optimized 244,510-byte PNG and is not loaded as page content.
 
-No product code was modified during this review.
+Deployment succeeded to the existing static app. The HTTPS origin serves the
+implementation title, direct demo route, immutable hashed assets, self-only
+CSP, non-cached worker, and deliberate styled HTTP 404.
+
+## Notes
+
+- The brief is free-only. There is no paid offer or billing dependency.
+- This static product has no backend, tenant state, server database, rate
+  limits, or installed CLI artifact; backend/tenant/429 checks do not apply.
+- Original hero, social, and touch assets with provenance are recorded in
+  `.factory/design.md`.
+- `.factory/catalog-description.txt` was copied to
+  `/work/.evidence/catalog-description.txt`.
+- Pre-existing Graphify output changes were left unmodified and uncommitted.
+
+No known product gaps remain.
