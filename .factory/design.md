@@ -86,7 +86,7 @@ Provenance: generated for Tab Playbook on 2026-08-27 with the factory-image
 deployment via `/opt/fleet/lib/gen-image.sh`. Original product asset; prompt is
 stored alongside the source image.
 
-The social preview (`public/assets/social-26b2b6387016.png`, 1200 × 630) and
+The social preview (`public/assets/social-0794623bc1ea.png`, 1200 × 630) and
 Apple touch icon (`public/assets/apple-touch-4cbebd35134d.png`, 180 × 180) were
 composed on 2026-09-06 from that same original generated hero with centered,
 non-destructive crops. They contain no added text, logo, person, or third-party

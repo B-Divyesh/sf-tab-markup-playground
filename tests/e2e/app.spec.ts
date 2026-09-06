@@ -236,7 +236,7 @@ test('@claim:deployment-policy serves titled routes, policy headers, immutable a
     expect(await page.locator('link[rel="canonical"]').count()).toBe(1);
     expect(response?.headers()['content-security-policy']).toContain("default-src 'self'");
   }
-  const asset = await page.request.get('/assets/social-26b2b6387016.png');
+  const asset = await page.request.get('/assets/social-0794623bc1ea.png');
   expect(asset.headers()['cache-control']).toBe('public, max-age=31536000, immutable');
   const worker = await page.request.get('/sw.js');
   expect(worker.headers()['cache-control']).toBe('no-cache, no-store, must-revalidate');
