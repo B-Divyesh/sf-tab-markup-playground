@@ -1,4 +1,45 @@
-# Tab Playbook repair handoff
+# Tab Playbook verification 3 handoff
+
+Work order: `tab-markup-playground-verify-3`
+
+Verified: 2026-09-06
+
+Live URL: <https://tab-markup-playground.sociobot.in>
+
+## Result
+
+**FAIL — 1 medium finding and 2 untested public claims.**
+
+Implementation reviewed:
+`1d1e47f018800e6739f38d07600aef5b60b24e33`. Documentation supplied:
+`975771a4d277394463d5da8cdeffc2234e5ebac9`. The later work-order checkout
+commit changes Graphify output only. Twenty of twenty public build artifacts
+match the live deployment byte for byte.
+
+All 16 declared claim commands passed individually from a clean detached clone.
+The clean install and audit, 6 unit tests, TypeScript check, production build,
+build claim, and browser suite also passed. The browser suite reported 39
+passes and its one documented mobile service-worker skip.
+
+Fresh desktop and phone checks passed the sample, isolated storage, reset,
+start-for-real, authoring, theory, transpose, share, invalid input, 8,000/8,001
+boundary, recovery, keyboard, focus, responsive, reduced-motion, legal, 404,
+privacy-traffic, and offline/update paths. Axe found no violations on five
+routes at both sizes. Lighthouse 13.4.1 scored 100 in all four categories.
+
+The remaining finding is claim coverage. **Copy markup** and the visible
+**Ctrl + Enter copies the share link** shortcut both work live, but neither is
+listed in `.factory/claims.json` or exercised by a tagged claim test. The
+claims contract therefore prevents a PASS until both behaviors have declared
+observable tests or the public promises are removed.
+
+Full evidence and required disposition are in
+[`.factory/verification-3.md`](verification-3.md). The report is copied to
+`/work/.evidence/qa-report.md`; machine-readable status is in
+`/work/.evidence/qa-result.json`. No product code was changed. Existing
+Graphify changes remain preserved and uncommitted.
+
+## Prior repair record
 
 Work order: `tab-markup-playground-repair-3`
 Completed: 2026-09-06
