@@ -1,107 +1,26 @@
-# Tab Playbook — verification handoff
+# Tab Playbook review handoff
 
-Work order: `tab-markup-playground-verify-2`
+Work order: `tab-markup-playground-review-1`
 
-Verified candidate: `2c9a0ff72be8346b15b8fb42b497f6a3bf0bd3f1`
+Reviewed: 2026-09-06
 
 Live URL: <https://tab-markup-playground.sociobot.in>
 
-Completed: 2026-08-28
+Implementation: `12c4005d1372de54fb4952ef5406576c9cbbde1b`
 
-## Result: PASS
+Documentation baseline: `7f0725431951260bf29fd2945e0c99a0644d5138`
 
-Independent clean-checkout verification passed. The live deployment matches
-the candidate production build, and no defects were found. Full evidence is in
-[`.factory/verification-2.md`](verification-2.md).
-
-## How verified
-
-```sh
-npm ci
-npm audit --audit-level=high
-npm test
-npx tsc --noEmit
-npm run build
-npm run test:e2e
-```
-
-Results: 9/9 unit/configuration tests and all 14 configured Playwright runs
-passed; `dist/` was produced. Live desktop and 390px mobile checks covered the
-four-bar author/analyze/transpose/share job, invalid-markup recovery, empty and
-undo states, 8,000-character boundary, keyboard tabs/focus, reduced motion,
-all-page Axe, console/page errors, service-worker update/offline reload,
-same-origin-only traffic, headers/caching, and SHA-256 build/deployment
-identity. Lighthouse mobile: Performance 99, Accessibility 100, Best Practices
-100, SEO 100.
-
-The product has no API, account, or backend endpoint; rate-limit and identity
-tenant checks are not applicable. It keeps drafts in browser localStorage and
-share content in URL fragments; it sends no analytics or third-party requests.
-
-## Known boundaries
-
-Tab Playbook is intentionally an educational visualization: it does not offer
-authoritative notation, audio playback, copyrighted-song hosting, a song
-catalog, accounts, or uploads. Applying transposition preserves tab fret
-numbers because safe fret rewriting requires fingering/range choices.
-
----
-
-# Historical repair handoff
-
-Work order: `tab-markup-playground-repair-2`
-
-Repaired candidate: `270697f9d17a2c8efd636c1bfd236a59361c41d5`
-
-Verifier report commit: `faa2ffd24704256b413435224f2d1e5bbe589403`
-
-Repair commit: `12c4005`
-
-Completed: 2026-08-28
+Checkout: `b84f243c29de8522c3cdbdcec61421335886fd5f`
 
 ## Result
 
-All release-blocking findings in `.factory/verification.md` are repaired and
-verified in production at <https://tab-markup-playground.sociobot.in>.
+**FAIL — 6 findings and 16 untested public claims.**
 
-- Every visible interactive target is at least 44 × 44 CSS px in every analysis
-  state, on both legal pages, at desktop width, and at 390 × 844. The verifier's
-  four reported targets now measure: Apply to text 131.42 × 44, brand 156.98 ×
-  44, Privacy 47.08 × 44, and Terms 44 × 44 px on live mobile.
-- All files under `/assets/*` are content fingerprinted. Azure Static Web Apps
-  now returns `Cache-Control: public, max-age=31536000, immutable` for the live
-  JS, CSS, AVIF/WebP, and icon assets. HTML/legal pages use `no-cache,
-  max-age=0, must-revalidate`; `/sw.js` uses `no-cache, no-store,
-  must-revalidate`, so updates remain discoverable.
-- A self-only Content Security Policy is live. Runtime inline styles were
-  replaced with bounded CSS classes so `style-src 'self'` works without
-  `unsafe-inline`; the existing chord colors and note-light stagger remain.
-  Live Chromium reports no console or page errors.
+The core editor works and the live files match the reviewed build. The release
+does not meet the current demo, claim, first-screen, skip-link, routing, and
+site-metadata contracts. See `.factory/review-1.md` for full evidence.
 
-The researched brief, static artifact class, core markup/parser behavior,
-local-first persistence, fragment sharing, transposition behavior, visual
-system, and original generated art are unchanged.
-
-## Regression coverage
-
-- `tests/e2e/app.spec.ts` measures every visible link, button, select, summary,
-  text area, and focusable fret scroller after activating each of the four
-  theory views, then repeats on `/privacy/` and `/terms/` in desktop Chromium
-  and the 390 px mobile project.
-- The production CSP is applied by the Vite preview during browser tests. Tests
-  exercise dynamic fretboard/scale rendering, assert there are no inline style
-  attributes or blocked-resource console errors, and scan all three pages with
-  axe.
-- `tests/unit/deployment-config.test.ts` asserts immutable asset routing,
-  revalidating document/worker policy, restrictive CSP directives with no
-  `unsafe-inline`, and verifies each public asset's 12-character filename hash
-  against its actual SHA-256 content.
-- Service-worker coverage checks controller ownership, no waiting worker, only
-  the `tab-playbook-v2` cache, and a successful offline reload.
-
-## Clean verification
-
-Run from Node.js 20+:
+## Verification completed
 
 ```sh
 npm ci
@@ -112,55 +31,26 @@ npm run build
 npm run test:e2e
 ```
 
-Results on the committed repair:
+The clean checkout passed 9 unit/config tests and 12 browser runs with 2
+intentional skips. The build produced `dist/`. Live desktop and phone checks
+covered sample loading, realistic populated output, normal author/transpose/
+share behavior, invalid input, 8,000/8,001-character boundaries, clear/undo,
+damaged-link recovery, keyboard and focus, reduced motion, Axe, offline/update,
+privacy traffic, links, route titles, legal pages, and unknown routes.
 
-- Clean install: 54 packages installed; audit found 0 vulnerabilities.
-- Unit/config: 9/9 passed.
-- TypeScript no-emit check and Vite production build: passed; `dist/index.html`
-  exists.
-- Browser: 12 passed and 2 intentional cross-project skips across desktop and
-  390 × 844 Chromium. Coverage includes the author/analyze/transpose/share
-  journey, keyboard Arrow/Home/End tabs, mobile layout, all target sizes, CSP,
-  all-page axe scans, console errors, service-worker update, and offline reload.
-- Production initial assets: main JS 12,052 B (4.99 KB gzip) and CSS 15,467 B
-  (4.25 KB gzip); mobile AVIF hero 15,300 B. These remain far below the 200 KB
-  JS, 50 KB CSS, and 300 KB hero budgets.
-- Lighthouse 12.8.2 mobile: Performance 100, Accessibility 100, Best Practices
-  100, SEO 100; FCP 0.9 s, LCP 1.4 s, CLS 0, TBT 30 ms.
-- Factory URL verifier: HTTPS 200, one h1, `lang="en"`, main landmark, complete
-  image alt text, labeled buttons, and zero console/page errors. Desktop and
-  390 px screenshots were visually reviewed with no clipping or page overflow.
-- Privacy/reduced motion: browser traffic stayed same-origin; draft content was
-  present in local storage and absent from requests; reduced-motion panel
-  animation was 0.01 ms.
+Lighthouse mobile scored 100 for performance, accessibility, best practices,
+and SEO. LCP was 1.1 s, TBT 0 ms, and CLS 0. The current live assets match the
+local production build by SHA-256.
 
-## Deployment and live evidence
+## Work left
 
-Deployed `dist/` to the existing Azure Static Web App
-`sf-tab-markup-playground` in `eastus2` with the factory static deployment
-script. Azure deployment ID: `3d45deb5-cdbe-4df0-94df-6ec6059916dc`.
+1. Add an isolated one-click demo with its required label, reset, exit, route,
+   storage namespace, and `.factory/demo.md`.
+2. Add `.factory/claims.json` and one tagged sandbox test for every retained
+   public claim.
+3. Rewrite and complete the first screen and landing-page order, then add
+   `.factory/copy-audit.md`.
+4. Repair the skip link, demo route, designed 404, route metadata, header,
+   footer, and sitemap.
 
-- Live root, privacy, terms, service worker, and every file in `dist/assets/`
-  match the local production build by SHA-256; every `dist/assets/` response
-  also returns the one-year immutable policy.
-- Live JS `/assets/main-C9zuRvg9.js`, CSS
-  `/assets/styles-C2280_YT.css`, and hero
-  `/assets/hero-640-288e461a0630.avif` return one-year immutable caching.
-- Live root and legal pages revalidate; live `/sw.js` is no-store. The CSP and
-  existing nosniff, referrer, and permissions policies are present on live
-  responses.
-- Fresh live 390 px Chromium: 0 serious/critical axe issues on root, privacy,
-  and terms; same-origin requests only; no console/page errors; service worker
-  controlled the page, had no waiting update, retained only `tab-playbook-v2`,
-  and reloaded successfully offline with the offline status announced.
-- Unknown-route navigation returns the app shell with HTTP 200 as configured.
-
-## Known product boundaries
-
-- This remains an educational visualization, not score engraving, audio
-  playback, fingering advice, or a copyrighted-song library.
-- Enharmonic output favors sharps. Applying transposition intentionally keeps
-  tab fret numbers unchanged because safe fret rewriting requires fingering and
-  range choices.
-
-No release-blocking gaps remain from the independent verification report.
+No product code was modified during this review.
