@@ -170,6 +170,11 @@
       "degree": 9
     },
     {
+      "id": "src_music_parsemarkup",
+      "label": "parseMarkup()",
+      "degree": 8
+    },
+    {
       "id": "src_main_render",
       "label": "render()",
       "degree": 8
@@ -180,9 +185,9 @@
       "degree": 8
     },
     {
-      "id": "src_music_parsemarkup",
-      "label": "parseMarkup()",
-      "degree": 8
+      "id": "src_music_transposemarkup",
+      "label": "transposeMarkup()",
+      "degree": 7
     },
     {
       "id": "src_main_escapehtml",
@@ -193,25 +198,9 @@
       "id": "src_main_renderintervals",
       "label": "renderIntervals()",
       "degree": 7
-    },
-    {
-      "id": "src_main_renderscale",
-      "label": "renderScale()",
-      "degree": 7
     }
   ],
   "surprises": [
-    {
-      "source": "render()",
-      "target": "parseMarkup()",
-      "source_files": [
-        "src/main.ts",
-        "src/music.ts"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "bridges separate communities"
-    },
     {
       "source": "renderChords()",
       "target": "chordTones()",
@@ -222,17 +211,6 @@
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "bridges separate communities"
-    },
-    {
-      "source": "renderChords()",
-      "target": "noteName()",
-      "source_files": [
-        "src/main.ts",
-        "src/music.ts"
-      ],
-      "confidence": "INFERRED",
-      "relation": "indirect_call",
-      "why": "inferred connection - not explicitly stated in source"
     },
     {
       "source": "renderFretboard()",
@@ -255,6 +233,28 @@
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "bridges separate communities"
+    },
+    {
+      "source": "render()",
+      "target": "parseMarkup()",
+      "source_files": [
+        "src/main.ts",
+        "src/music.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "renderChords()",
+      "target": "noteName()",
+      "source_files": [
+        "src/main.ts",
+        "src/music.ts"
+      ],
+      "confidence": "INFERRED",
+      "relation": "indirect_call",
+      "why": "inferred connection - not explicitly stated in source"
     }
   ],
   "tokens": {
